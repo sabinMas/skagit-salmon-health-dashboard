@@ -1,65 +1,82 @@
-// Sample data - you'll load real WDFW data later
-const populationData = {
-  years: [
-    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016,
-    2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024,
-  ],
-  counts: [
-    1850, 1720, 1950, 1680, 1520, 1450, 1380, 1290, 1410, 1240, 1180, 1050, 980,
-    875, 920, 845, 780, 710, 745, 432,
-  ],
-};
+/* =========================
+   DATA SOURCES (your files)
+   ========================= */
+const WATERSHED_GEOJSON_PATH = "data/puget-sound-watersheds.geojson";
+const WATERSHED_CSV_PATH = "data/cleaned_puget_sound_watershed_data_final.csv";
 
-// Initialize Leaflet map
-const map = L.map("map").setView([48.35, -122.15], 9);
+/* =========================
+   HELPERS
+   ========================= */
+
+// Very small CSV parser (works for your simple, comma-separated file)
+function parseCSV(text) {
+  const lines = text.trim().split(/\r?\n/);
+  const headers = lines[0].split(",").map((h) => h.trim());
+  const rows = [];
+
+  for (let i = 1; i < lines.length; i++) {
+    if (!lines[i].trim()) continue;
+    const values = lines[i].split(",").map((v) => v.trim());
+    const row = {};
+    headers.forEach((h, idx) => (row[h] = values[idx]));
+    rows.push(row);
+  }
+  return rows;
+}
+
+function toNumber(v) {
+  if (v === null || v === undefined || v === "") return NaN;
+  const n = Number(v);
+  return Number.isFinite(n) ? n : NaN;
+}
+
+function normalizeName(name) {
+  return (name || "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .replace(/[–—]/g, "-")
+    .trim();
+}
+
+// Color watersheds by population health status
+function getPopulationColor(population, target) {
+  // If missing target, make it neutral gray
+  if (!Number.isFinite(population) || !Number.isFinite(target) || target <= 0)
+    return "#95a5a6";
+
+  const percentOfTarget = (population / target) * 100;
+  if (percentOfTarget < 5) return "#8b0000"; // critical
+  if (percentOfTarget < 10) return "#e74c3c"; // endangered
+  if (percentOfTarget < 15) return "#f39c12"; // threatened
+  return "#2ecc71"; // stable
+}
+
+function statusLabel(population, target) {
+  if (!Number.isFinite(population) || !Number.isFinite(target) || target <= 0)
+    return "Data unavailable";
+  const pct = (population / target) * 100;
+  if (pct < 5) return "Critical";
+  if (pct < 10) return "Endangered";
+  if (pct < 15) return "Threatened";
+  return "Stable";
+}
+
+/* =========================
+   LEAFLET MAP
+   ========================= */
+
+const map = L.map("map").setView([48.35, -122.15], 8);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "© OpenStreetMap contributors",
   maxZoom: 19,
 }).addTo(map);
 
-// Add Skagit River (sample GeoJSON - replace with real data)
-const skagitRiver = {
-  type: "FeatureCollection",
-  features: [
-    {
-      type: "Feature",
-      properties: { name: "Skagit River Watershed" },
-      geometry: {
-        type: "Polygon",
-        coordinates: [
-          [
-            [-122.3, 48.5],
-            [-122.1, 48.45],
-            [-121.95, 48.25],
-            [-122.05, 48.1],
-            [-122.25, 48.15],
-            [-122.3, 48.5],
-          ],
-        ],
-      },
-    },
-  ],
-};
+/* =========================
+   HABITAT ZONES (still sample)
+   ========================= */
 
-L.geoJSON(skagitRiver, {
-  style: {
-    color: "#1a5f7a",
-    weight: 3,
-    opacity: 0.8,
-    fillOpacity: 0.2,
-    fillColor: "#2ecc71",
-  },
-  onEachFeature: function (feature, layer) {
-    layer.bindPopup(
-      "<strong>" +
-        feature.properties.name +
-        "</strong><br>ESA-listed threatened species",
-    );
-  },
-}).addTo(map);
-
-// Add sample spawning habitat zones
+// Keep your sample habitat zones as-is
 const habitatZones = {
   type: "FeatureCollection",
   features: [
@@ -124,9 +141,12 @@ L.geoJSON(habitatZones, {
   },
 }).addTo(map);
 
-// Add legend
+/* =========================
+   LEGEND
+   ========================= */
+
 const legend = L.control({ position: "bottomright" });
-legend.onAdd = function (map) {
+legend.onAdd = function () {
   const div = L.DomUtil.create("div", "info");
   div.style.background = "white";
   div.style.padding = "10px";
@@ -142,52 +162,145 @@ legend.onAdd = function (map) {
 };
 legend.addTo(map);
 
-// Color watersheds by population health status
-function getPopulationColor(population, target) {
-  const percentOfTarget = (population / target) * 100;
-  if (percentOfTarget < 5) return "#8b0000"; // Dark red - critical
-  if (percentOfTarget < 10) return "#e74c3c"; // Red - endangered
-  if (percentOfTarget < 15) return "#f39c12"; // Orange - threatened
-  return "#2ecc71"; // Green - stable (unlikely)
-}
+/* =========================
+   LOAD + JOIN YOUR REAL DATA
+   ========================= */
 
-// Population status update
-const latestYear = populationData.years[populationData.years.length - 1];
-const latestCount = populationData.counts[populationData.counts.length - 1];
-const previousCount = populationData.counts[populationData.counts.length - 2];
-const change = latestCount - previousCount;
-const percentChange = ((change / previousCount) * 100).toFixed(1);
+Promise.all([
+  fetch(WATERSHED_GEOJSON_PATH).then((r) => r.json()),
+  fetch(WATERSHED_CSV_PATH).then((r) => r.text()),
+])
+  .then(([geo, csvText]) => {
+    const csvRows = parseCSV(csvText);
 
-document.getElementById("status-content").innerHTML = `
-  <p><strong>Current Year:</strong> ${latestYear}</p>
-  <p><strong>Spawning Count:</strong> ${latestCount}</p>
-  <p><strong>10-Year Average:</strong> ${Math.round(populationData.counts.slice(-10).reduce((a, b) => a + b) / 10)}</p>
-  <p style="color: ${change < 0 ? "#e74c3c" : "#2ecc71"};">
-    <strong>Change from ${latestYear - 1}:</strong> ${change > 0 ? "+" : ""}${change} (${percentChange}%)
-  </p>
-  <p style="font-size: 0.85rem; margin-top: 0.75rem; color: #666;">
-    ⚠️ <strong>Critical:</strong> Populations remain well below recovery goals
-  </p>
-`;
+    // Build a lookup from watershed name -> data row
+    const csvByName = {};
+    csvRows.forEach((r) => {
+      const key = normalizeName(r.Watershed);
+      csvByName[key] = {
+        watershed: r.Watershed,
+        latestYearPop: toNumber(r.LatestYear_pop),
+        population: toNumber(r.Population),
+        latestYearTarget: toNumber(r.LatestYear_target),
+        recoveryTarget: toNumber(r.RecoveryTarget),
+      };
+    });
 
-// Calculate regional statistics
-fetch("data/puget-sound-watersheds.geojson")
-  .then((res) => res.json())
-  .then((data) => {
-    const features = data.features;
-    const totalPop = features.reduce(
-      (sum, f) => sum + f.properties.population_2024,
-      0,
+    // Attach CSV data to each GeoJSON feature by matching name
+    geo.features.forEach((f) => {
+      const geoName =
+        f.properties?.name || f.properties?.watershed || f.properties?.NAME;
+      const key = normalizeName(geoName);
+
+      const match = csvByName[key];
+
+      // Keep existing geometry; standardize properties for the rest of the script
+      f.properties = f.properties || {};
+      f.properties.name = geoName || f.properties.name || "Unknown Watershed";
+
+      if (match) {
+        f.properties.latest_year_pop = match.latestYearPop;
+        f.properties.population = match.population;
+        f.properties.latest_year_target = match.latestYearTarget;
+        f.properties.recovery_target = match.recoveryTarget;
+      } else {
+        // No match in CSV (still render, but gray)
+        f.properties.latest_year_pop = NaN;
+        f.properties.population = NaN;
+        f.properties.latest_year_target = NaN;
+        f.properties.recovery_target = NaN;
+      }
+    });
+
+    // Draw watersheds (replaces your sample Skagit polygon)
+    const watershedLayer = L.geoJSON(geo, {
+      style: (feature) => {
+        const pop = feature.properties.population;
+        const target = feature.properties.recovery_target;
+        return {
+          color: "#1a5f7a",
+          weight: 2,
+          opacity: 0.85,
+          fillOpacity: 0.35,
+          fillColor: getPopulationColor(pop, target),
+        };
+      },
+      onEachFeature: (feature, layer) => {
+        const name = feature.properties.name;
+        const yearPop = feature.properties.latest_year_pop;
+        const pop = feature.properties.population;
+        const yearTarget = feature.properties.latest_year_target;
+        const target = feature.properties.recovery_target;
+
+        const pct =
+          Number.isFinite(pop) && Number.isFinite(target) && target > 0
+            ? ((pop / target) * 100).toFixed(1) + "%"
+            : "—";
+
+        layer.bindPopup(`
+          <strong>${name}</strong><br>
+          <strong>Population:</strong> ${
+            Number.isFinite(pop) ? pop.toLocaleString() : "—"
+          } ${Number.isFinite(yearPop) ? `(Year ${yearPop})` : ""}<br>
+          <strong>Recovery Target:</strong> ${
+            Number.isFinite(target) ? target.toLocaleString() : "—"
+          } ${Number.isFinite(yearTarget) ? `(Year ${yearTarget})` : ""}<br>
+          <strong>Status:</strong> ${statusLabel(pop, target)} (${pct})
+        `);
+      },
+    }).addTo(map);
+
+    // Fit map to watersheds
+    try {
+      map.fitBounds(watershedLayer.getBounds(), { padding: [20, 20] });
+    } catch (e) {
+      // no-op if bounds fail
+    }
+
+    /* =========================
+       REGIONAL STATUS CARD
+       ========================= */
+
+    // Use ONLY watersheds that have numeric values
+    const valid = geo.features.filter(
+      (f) =>
+        Number.isFinite(f.properties.population) &&
+        Number.isFinite(f.properties.recovery_target) &&
+        f.properties.recovery_target > 0,
     );
-    const totalTarget = features.reduce(
+
+    const totalPop = valid.reduce((sum, f) => sum + f.properties.population, 0);
+    const totalTarget = valid.reduce(
       (sum, f) => sum + f.properties.recovery_target,
       0,
     );
-    const percentOfTarget = ((totalPop / totalTarget) * 100).toFixed(1);
+
+    const percentOfTarget =
+      totalTarget > 0 ? ((totalPop / totalTarget) * 100).toFixed(1) : "—";
     const gap = totalTarget - totalPop;
 
+    // Find most/least endangered among valid
+    const ranked = [...valid].sort((a, b) => {
+      const ap = a.properties.population / a.properties.recovery_target;
+      const bp = b.properties.population / b.properties.recovery_target;
+      return ap - bp;
+    });
+
+    const mostEnd = ranked[0];
+    const leastEnd = ranked[ranked.length - 1];
+
+    const mostEndPct = (
+      (mostEnd.properties.population / mostEnd.properties.recovery_target) *
+      100
+    ).toFixed(1);
+
+    const leastEndPct = (
+      (leastEnd.properties.population / leastEnd.properties.recovery_target) *
+      100
+    ).toFixed(1);
+
     document.getElementById("status-content").innerHTML = `
-      <p><strong>Puget Sound Region (8 Watersheds)</strong></p>
+      <p><strong>Puget Sound Region (${valid.length} watersheds with data)</strong></p>
       <p style="margin-top: 0.75rem;"><strong>Total Population:</strong> ${totalPop.toLocaleString()} spawning adults</p>
       <p><strong>Recovery Target:</strong> ${totalTarget.toLocaleString()}</p>
       <p><strong>Regional Status:</strong> ${percentOfTarget}% of target</p>
@@ -195,57 +308,76 @@ fetch("data/puget-sound-watersheds.geojson")
         ⚠️ <strong>Critical Gap:</strong> ${gap.toLocaleString()} additional spawners needed
       </p>
       <p style="font-size: 0.85rem; margin-top: 0.75rem; color: #666;">
-        📊 <strong>Most Endangered:</strong> Duwamish (4.2% of target)<br>
-        📈 <strong>Least Endangered:</strong> Chambers-Clover (10.3% of target)
+        📉 <strong>Most Endangered:</strong> ${mostEnd.properties.name} (${mostEndPct}% of target)<br>
+        📈 <strong>Least Endangered:</strong> ${leastEnd.properties.name} (${leastEndPct}% of target)
       </p>
     `;
-  });
 
-  // Load watershed comparison data
-fetch('data/puget-sound-watersheds.geojson')
-  .then(res => res.json())
-  .then(data => {
-    const watersheds = data.features.map(f => f.properties.name);
-    const populations = data.features.map(f => f.properties.population_2024);
-    const targets = data.features.map(f => f.properties.recovery_target);
-    
-    // Create comparison chart
-    const ctx = document.getElementById('watershedChart').getContext('2d');
+    /* =========================
+       WATERSHED COMPARISON CHART
+       ========================= */
+
+    const chartLabels = valid.map((f) => f.properties.name);
+    const chartPops = valid.map((f) => f.properties.population);
+    const chartTargets = valid.map((f) => f.properties.recovery_target);
+
+    const ctx = document.getElementById("watershedChart").getContext("2d");
     new Chart(ctx, {
-      type: 'bar',
+      type: "bar",
       data: {
-        labels: watersheds,
+        labels: chartLabels,
         datasets: [
           {
-            label: 'Current Population',
-            data: populations,
-            backgroundColor: 'rgba(231, 76, 60, 0.7)',
-            borderColor: '#e74c3c',
-            borderWidth: 1
+            label: "Current Population",
+            data: chartPops,
+            backgroundColor: "rgba(231, 76, 60, 0.7)",
+            borderColor: "#e74c3c",
+            borderWidth: 1,
           },
           {
-            label: 'Recovery Target',
-            data: targets,
-            backgroundColor: 'rgba(46, 204, 113, 0.3)',
-            borderColor: '#2ecc71',
-            borderWidth: 1
-          }
-        ]
+            label: "Recovery Target",
+            data: chartTargets,
+            backgroundColor: "rgba(46, 204, 113, 0.3)",
+            borderColor: "#2ecc71",
+            borderWidth: 1,
+          },
+        ],
       },
       options: {
-        indexAxis: 'y',
+        indexAxis: "y",
         responsive: true,
         maintainAspectRatio: true,
         plugins: {
-          legend: { display: true, position: 'top' }
+          legend: { display: true, position: "top" },
+          tooltip: {
+            callbacks: {
+              label: function (ctx) {
+                const v = ctx.raw;
+                return `${ctx.dataset.label}: ${Number(v).toLocaleString()}`;
+              },
+            },
+          },
         },
         scales: {
           x: {
             stacked: false,
-            ticks: { color: '#666' }
-          }
-        }
-      }
+            ticks: { color: "#666" },
+          },
+          y: {
+            ticks: { color: "#666" },
+          },
+        },
+      },
     });
+  })
+  .catch((err) => {
+    console.error("Failed to load watershed data:", err);
+    document.getElementById("status-content").innerHTML = `
+      <p style="color:#e74c3c;"><strong>Error:</strong> Could not load watershed data files.</p>
+      <p style="font-size:0.9rem;color:#666;">Check that these exist and paths are correct:</p>
+      <ul style="font-size:0.9rem;color:#666;margin-left:1.25rem;">
+        <li>${WATERSHED_GEOJSON_PATH}</li>
+        <li>${WATERSHED_CSV_PATH}</li>
+      </ul>
+    `;
   });
-
