@@ -1,95 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Puget Sound Chinook Salmon Dashboard</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Puget Sound Chinook Salmon Dashboard</title>
 
-    <!-- Leaflet -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    />
+  <!-- External Libraries -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/chart.js@4.3.0/dist/chart.min.js"></script>
 
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+  <!-- Application CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-  <body>
-    <header>
-      <h1>🐟 Puget Sound Watersheds — Chinook Salmon Population Health</h1>
-      <p>
-        Interactive analysis of salmon recovery in Washington's Puget Sound
-        watersheds
-      </p>
-    </header>
+<body>
+  <header>
+    <h1>🐟 Puget Sound Watersheds — Chinook Salmon Population Health</h1>
+    <p>Interactive analysis of salmon recovery with live WDFW data integration</p>
+  </header>
 
-    <main>
-      <div id="map" aria-label="Watershed map"></div>
+  <main>
+    <div id="map" aria-label="Watershed map"></div>
 
-      <aside id="dashboard">
-        <section id="status">
-          <h2>Population Status</h2>
-          <div id="status-content">Loading watershed totals...</div>
-          <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">
-            Tip: click a watershed on the map for details.
+    <aside id="dashboard">
+      <section id="status">
+        <h2>Population Status</h2>
+        <div id="status-content">
+          <div class="loading">Loading watershed data...</div>
+        </div>
+        <p class="status-tip">💡 Tip: Click a watershed on the map for detailed information.</p>
+        <div class="data-source">
+          <strong>Data Source:</strong> WDFW Salmonid Population Indicators (SPI) Database<br />
+          <span class="update-note">Last updated from live API</span>
+        </div>
+      </section>
+
+      <section id="trend">
+        <h2>Population Trend (5 Years)</h2>
+        <div class="section-description">
+          Historical population trajectory showing recovery progress
+        </div>
+        <canvas id="populationChart"></canvas>
+      </section>
+
+      <section id="watershed-comparison">
+        <h2>Watershed Comparison</h2>
+        <canvas id="watershedChart"></canvas>
+      </section>
+
+      <section id="threats">
+        <h2>Key Threats to Survival</h2>
+        <ul id="threats-list">
+          <li>🌡️ <strong>Warming water temperatures</strong> - Exceeding suitable rearing habitat ranges</li>
+          <li>🚧 <strong>Fish passage barriers</strong> - Dams and culverts restricting migration</li>
+          <li>🌲 <strong>Habitat loss & degradation</strong> - Reduced riparian areas and stream quality</li>
+          <li>🌊 <strong>Ocean survival conditions</strong> - Marine ecosystem changes affecting returns</li>
+          <li>⚠️ <strong>Hatchery impacts</strong> - Competition and genetic dilution from hatchery fish</li>
+        </ul>
+      </section>
+
+      <section id="recovery">
+        <h2>Recovery Resources</h2>
+        <div id="recovery-content">
+          <p>
+            <strong>Puget Sound Partnership:</strong> Coordinating salmon recovery across 14 watersheds<br />
+            <strong>PSAR Program:</strong> Over $350M invested since 2007 in habitat protection and restoration<br />
+            <strong>Co-Managers:</strong> WDFW and 17 Treaty Indian Tribes managing recovery efforts
           </p>
-        </section>
+        </div>
+      </section>
+    </aside>
+  </main>
 
-        <!-- Optional: keep this section only if you still render a populationChart in JS -->
-        <section id="trend">
-          <h2>Trend</h2>
-          <div style="font-size: 0.9rem; color: #666; margin-bottom: 0.5rem;">
-            (Trend chart requires a time-series dataset. If you don’t load one yet,
-            you can hide this section.)
-          </div>
-          <canvas id="populationChart"></canvas>
-        </section>
+  <footer>
+    <p>
+      🔗 Data: WDFW SPI Database | NOAA Fisheries SPS Database | Puget Sound Partnership
+      | Built with Leaflet &amp; Chart.js | 📊 Last Updated: <span id="update-time">Loading...</span>
+    </p>
+  </footer>
 
-        <section id="watershed-comparison">
-          <h2>Watershed Comparison</h2>
-          <canvas id="watershedChart" height="300"></canvas>
-        </section>
-
-        <section id="threats">
-          <h2>Key Threats</h2>
-          <ul id="threats-list">
-            <li>🌡️ Warming water temperatures</li>
-            <li>🚧 Fish passage barriers (dams, culverts)</li>
-            <li>🌲 Habitat loss and degradation</li>
-            <li>🌊 Ocean survival conditions</li>
-          </ul>
-        </section>
-
-        <section id="data-notes">
-          <h2>Data Notes</h2>
-          <ul style="margin: 0.5rem 0 0 1.25rem; color: #666; font-size: 0.9rem;">
-            <li>
-              Watershed geometry: <code>data/puget-sound-watersheds.geojson</code>
-            </li>
-            <li>
-              Population & targets: <code>data/cleaned_puget_sound_watershed_data_final.csv</code>
-            </li>
-          </ul>
-        </section>
-      </aside>
-    </main>
-
-    <footer>
-      <p>
-        Data: WDFW | Built with Leaflet & Chart.js
-      </p>
-    </footer>
-
-    <!-- Libraries -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-    <!-- Chart.js (your JS uses Chart) -->
-    <script src="https://unpkg.com/chart.js@3/dist/chart.min.js"></script>
-
-    <!-- CSV parsing (your script.js uses parseCSV, so NOT required).
-         If you ever switch to Papa.parse, add PapaParse here. -->
-    <!-- <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script> -->
-
-    <script src="script.js"></script>
-  </body>
+  <!-- Application JavaScript -->
+  <script src="script.js"></script>
+</body>
 </html>
