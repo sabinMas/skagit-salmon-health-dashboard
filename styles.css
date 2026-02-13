@@ -611,6 +611,168 @@ footer p {
     animation: pulse 1.5s ease-in-out infinite;
 }
 
+/* =========================
+   TIME SLIDER CONTROLS
+   ========================= */
+
+#time-slider-container {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 1.25rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  min-width: 500px;
+  border: 2px solid #0284c7;
+}
+
+#time-display {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#current-year {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0f172a;
+  display: block;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#year-change-indicator {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  min-height: 24px;
+  color: #0284c7;
+}
+
+#year-change-indicator.increase {
+  color: #22c55e;
+}
+
+#year-change-indicator.decrease {
+  color: #dc2626;
+}
+
+#slider-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#play-pause-btn {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.3);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+#play-pause-btn:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
+  transform: translateY(-2px);
+}
+
+#play-pause-btn:active {
+  transform: translateY(0);
+}
+
+#year-slider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  background: linear-gradient(to right, #dc2626 0%, #ca8a04 50%, #22c55e 100%);
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+#year-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: #0f172a;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+#year-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+#year-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: #0f172a;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+#year-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+}
+
+#slider-range {
+  font-size: 0.9rem;
+  color: #64748b;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+/* Smooth transitions for map circles */
+.leaflet-interactive {
+  transition: r 0.3s ease, fill 0.3s ease, fill-opacity 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #time-slider-container {
+    min-width: 90%;
+    padding: 1rem;
+    bottom: 40px;
+  }
+  
+  #current-year {
+    font-size: 2rem;
+  }
+  
+  #slider-controls {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  #year-slider {
+    width: 100%;
+  }
+  
+  #play-pause-btn {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+
 @keyframes pulse {
     0%, 100% {
         opacity: 1;
