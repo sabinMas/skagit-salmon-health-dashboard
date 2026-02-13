@@ -532,3 +532,113 @@ footer p {
     max-height: 250px;
   }
 }
+
+
+/* =========================
+   TEMPERATURE MONITORING STYLES
+   ========================= */
+
+/* Temperature marker styling */
+.temperature-marker {
+    background: transparent;
+}
+
+.thermometer-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    border: 2px solid white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.thermometer-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Temperature popup styling */
+.temperature-popup {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 8px;
+    min-width: 280px;
+}
+
+.temperature-popup strong {
+    color: #1e293b;
+}
+
+.temperature-popup-content .leaflet-popup-content-wrapper {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Temperature legend styling */
+.temperature-legend {
+    background: white;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 13px;
+    max-width: 220px;
+}
+
+.temperature-legend div {
+    margin-bottom: 4px;
+}
+
+/* Loading indicator for temperature data */
+#temperature-loading {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(30, 41, 59, 0.95);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    font-size: 14px;
+    z-index: 10000;
+    display: none;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Toggle button for temperature layer */
+#toggle-temperature {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    margin-left: 8px;
+}
+
+#toggle-temperature:hover {
+    background-color: #2563eb;
+}
+
+#toggle-temperature:active {
+    background-color: #1d4ed8;
+    transform: scale(0.98);
+}
