@@ -34,6 +34,300 @@ const PUGET_SOUND_WATERSHEDS = [
 let barriersLayer;
 let barriersVisible = true;
 
+/* =========================
+   USGS STREAM TEMPERATURE MONITORING
+   ========================= */
+
+/* USGS Water Services API Configuration */
+const USGS_WATER_API = "https://waterservices.usgs.gov/nwis/iv/";
+
+/* Puget Sound Region Bounding Box */
+const PUGET_SOUND_BOUNDS = {
+    minLat: 46.8,
+    maxLat: 48.5,
+    minLon: -123.2,
+    maxLon: -121.5
+};
+
+/* Temperature parameter code (00010 = Temperature, water, degrees Celsius) */
+const TEMP_PARAMETER_CODE = "00010";
+
+/* Layer group for temperature stations */
+let temperatureLayer;
+let temperatureVisible = true;
+let temperatureRefreshInterval;
+
+/* Temperature thresholds for salmon health (in Celsius) */
+const TEMP_THRESHOLDS = {
+    optimal: 15,    // < 15°C - Blue (optimal for salmon)
+    marginal: 18,   // 15-18°C - Yellow (marginal)
+    stressful: 20   // 18-20°C - Orange (stressful), > 20°C - Red (lethal)
+};
+
+/* =========================
+   HELPER FUNCTIONS FOR TEMPERATURE
+   ========================= */
+
+function getTemperatureColor(temp) {
+    if (temp === null || temp === undefined) return "#94a3b8";
+    if (temp < TEMP_THRESHOLDS.optimal) return "#3b82f6";      // Blue - optimal
+    if (temp < TEMP_THRESHOLDS.marginal) return "#eab308";     // Yellow - marginal
+    if (temp < TEMP_THRESHOLDS.stressful) return "#f97316";    // Orange - stressful
+    return "#dc2626";                                           // Red - lethal
+}
+
+function getTemperatureStatus(temp) {
+    if (temp === null || temp === undefined) return "No data";
+    if (temp < TEMP_THRESHOLDS.optimal) return "Optimal";
+    if (temp < TEMP_THRESHOLDS.marginal) return "Marginal";
+    if (temp < TEMP_THRESHOLDS.stressful) return "Stressful";
+    return "Lethal";
+}
+
+function getTemperatureIcon(temp) {
+    const color = getTemperatureColor(temp);
+    return L.divIcon({
+        className: 'temperature-marker',
+        html: `<div class="thermometer-icon" style="background-color: ${color};">🌡️</div>`,
+        iconSize: [32, 32],
+        iconAnchor: [16, 32],
+        popupAnchor: [0, -32]
+    });
+}
+
+/* =========================
+   FETCH USGS TEMPERATURE DATA
+   ========================= */
+
+async function fetchUSGSTemperatureData() {
+    try {
+        console.log("Fetching stream temperature data from USGS...");
+        
+        // Show loading indicator
+        showTemperatureLoading(true);
+        
+        const params = new URLSearchParams({
+            format: "json",
+            stateCd: "WA",  // Washington state
+            parameterCd: TEMP_PARAMETER_CODE,
+            siteStatus: "active",
+            bBox: `${PUGET_SOUND_BOUNDS.minLon},${PUGET_SOUND_BOUNDS.minLat},${PUGET_SOUND_BOUNDS.maxLon},${PUGET_SOUND_BOUNDS.maxLat}`
+        });
+        
+        const response = await fetch(`${USGS_WATER_API}?${params}`);
+        
+        if (!response.ok) {
+            throw new Error(`USGS API error: ${response.status} ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        
+        if (!data.value || !data.value.timeSeries || data.value.timeSeries.length === 0) {
+            console.warn("No temperature data received from USGS API");
+            showTemperatureLoading(false);
+            return [];
+        }
+        
+        console.log(`Received ${data.value.timeSeries.length} temperature stations from USGS API`);
+        
+        // Parse and filter temperature data
+        const tempStations = data.value.timeSeries
+            .map(station => {
+                try {
+                    const site = station.sourceInfo;
+                    const values = station.values && station.values[0] && station.values[0].value;
+                    
+                    if (!values || values.length === 0) return null;
+                    
+                    const latestValue = values[values.length - 1];
+                    const temperature = parseFloat(latestValue.value);
+                    
+                    return {
+                        siteCode: site.siteCode[0].value,
+                        siteName: site.siteName,
+                        latitude: parseFloat(site.geoLocation.geogLocation.latitude),
+                        longitude: parseFloat(site.geoLocation.geogLocation.longitude),
+                        temperature: temperature,
+                        dateTime: latestValue.dateTime,
+                        streamName: site.siteName
+                    };
+                } catch (error) {
+                    console.warn("Error parsing station data:", error);
+                    return null;
+                }
+            })
+            .filter(station => station !== null && !isNaN(station.temperature));
+        
+        console.log(`Parsed ${tempStations.length} valid temperature stations`);
+        showTemperatureLoading(false);
+        return tempStations;
+        
+    } catch (error) {
+        console.error("Error fetching USGS temperature data:", error);
+        showTemperatureLoading(false);
+        return [];
+    }
+}
+
+/* =========================
+   ADD TEMPERATURE STATIONS TO MAP
+   ========================= */
+
+async function loadTemperatureStations() {
+    try {
+        const stations = await fetchUSGSTemperatureData();
+        
+        if (stations.length === 0) {
+            console.warn("No temperature stations to display");
+            return;
+        }
+        
+        // Remove existing layer if present
+        if (temperatureLayer) {
+            map.removeLayer(temperatureLayer);
+        }
+        
+        // Create new layer group for temperature stations
+        temperatureLayer = L.layerGroup();
+        
+        stations.forEach(station => {
+            const icon = getTemperatureIcon(station.temperature);
+            const status = getTemperatureStatus(station.temperature);
+            const color = getTemperatureColor(station.temperature);
+            
+            // Format date/time
+            const dateTime = new Date(station.dateTime).toLocaleString();
+            
+            // Create marker with popup
+            const marker = L.marker([station.latitude, station.longitude], { icon: icon })
+                .bindPopup(`
+                    <div class="temperature-popup">
+                        <strong style="color: ${color}; font-size: 1.1rem;">🌡️ ${station.siteName}</strong><br/>
+                        <hr style="margin: 0.5rem 0; border: none; border-top: 1px solid #e5e7eb;"/>
+                        <strong>Stream:</strong> ${station.streamName}<br/>
+                        <strong>Temperature:</strong> <span style="color: ${color}; font-weight: bold;">${station.temperature.toFixed(1)}°C (${(station.temperature * 9/5 + 32).toFixed(1)}°F)</span><br/>
+                        <strong>Status:</strong> <span style="color: ${color}; font-weight: bold;">${status}</span><br/>
+                        <strong>Measured:</strong> ${dateTime}<br/>
+                        <strong>Site Code:</strong> ${station.siteCode}
+                    </div>
+                `, {
+                    maxWidth: 350,
+                    className: 'temperature-popup-content'
+                });
+            
+            temperatureLayer.addLayer(marker);
+        });
+        
+        // Add temperature layer to map if visible
+        if (temperatureVisible) {
+            temperatureLayer.addTo(map);
+        }
+        
+        console.log(`Successfully added ${stations.length} temperature stations to map`);
+        
+    } catch (error) {
+        console.error("Error loading temperature stations to map:", error);
+    }
+}
+
+/* =========================
+   TEMPERATURE LEGEND
+   ========================= */
+
+function createTemperatureLegend() {
+    const tempLegend = L.control({ position: "topleft" });
+    
+    tempLegend.onAdd = function () {
+        const div = L.DomUtil.create("div", "temperature-legend");
+        div.style.background = "white";
+        div.style.padding = "12px";
+        div.style.borderRadius = "6px";
+        div.style.boxShadow = "0 0 15px rgba(0,0,0,0.2)";
+        div.style.fontFamily = "sans-serif";
+        div.style.fontSize = "13px";
+        
+        div.innerHTML = `
+            <div style="font-weight:bold;margin-bottom:8px;">🌡️ Stream Temperature</div>
+            <div style="display:flex;align-items:center;margin-bottom:4px;">
+                <div style="width:18px;height:18px;background-color:#3b82f6;margin-right:8px;border-radius:50%;"></div>
+                <span>< 15°C (Optimal)</span>
+            </div>
+            <div style="display:flex;align-items:center;margin-bottom:4px;">
+                <div style="width:18px;height:18px;background-color:#eab308;margin-right:8px;border-radius:50%;"></div>
+                <span>15-18°C (Marginal)</span>
+            </div>
+            <div style="display:flex;align-items:center;margin-bottom:4px;">
+                <div style="width:18px;height:18px;background-color:#f97316;margin-right:8px;border-radius:50%;"></div>
+                <span>18-20°C (Stressful)</span>
+            </div>
+            <div style="display:flex;align-items:center;margin-bottom:4px;">
+                <div style="width:18px;height:18px;background-color:#dc2626;margin-right:8px;border-radius:50%;"></div>
+                <span>> 20°C (Lethal)</span>
+            </div>
+        `;
+        
+        return div;
+    };
+    
+    tempLegend.addTo(map);
+}
+
+/* =========================
+   LOADING INDICATOR
+   ========================= */
+
+function showTemperatureLoading(show) {
+    const loadingDiv = document.getElementById('temperature-loading');
+    if (loadingDiv) {
+        loadingDiv.style.display = show ? 'block' : 'none';
+    }
+}
+
+/* =========================
+   AUTO-REFRESH TEMPERATURE DATA
+   ========================= */
+
+function startTemperatureRefresh() {
+    // Refresh every 30 minutes (1800000 milliseconds)
+    temperatureRefreshInterval = setInterval(() => {
+        console.log("Auto-refreshing temperature data...");
+        loadTemperatureStations();
+    }, 1800000);
+}
+
+function stopTemperatureRefresh() {
+    if (temperatureRefreshInterval) {
+        clearInterval(temperatureRefreshInterval);
+        temperatureRefreshInterval = null;
+    }
+}
+
+/* =========================
+   TOGGLE TEMPERATURE VISIBILITY
+   ========================= */
+
+function toggleTemperature() {
+    if (!temperatureLayer) {
+        console.warn("Temperature layer not initialized");
+        return;
+    }
+    
+    if (temperatureVisible) {
+        map.removeLayer(temperatureLayer);
+        temperatureVisible = false;
+        const btn = document.getElementById('toggle-temperature');
+        if (btn) btn.textContent = '🔲 Show Temperature';
+        console.log("Temperature stations hidden");
+    } else {
+        temperatureLayer.addTo(map);
+        temperatureVisible = true;
+        const btn = document.getElementById('toggle-temperature');
+        if (btn) btn.textContent = '✅ Hide Temperature';
+        console.log("Temperature stations visible");
+    }
+}
+
+
 
 /* =========================
    FALLBACK WATERSHED DATA
@@ -429,6 +723,9 @@ function toggleBarriers() {
 async function initDashboard() {
   await loadWatershedBoundaries();
    await loadFishBarriers();
+       await loadTemperatureStations();
+    createTemperatureLegend();
+    startTemperatureRefresh();
   
   try {
     let watershedData = await fetchWDFWData();
