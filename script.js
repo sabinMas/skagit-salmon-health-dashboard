@@ -273,11 +273,162 @@ legend.onAdd = function () {
 };
 legend.addTo(map);
 
+
+/* =========================
+   FETCH WSDOT FISH PASSAGE BARRIERS
+   ========================= */
+async function fetchFishBarriers() {
+  try {
+    console.log("Fetching fish passage barriers from WSDOT...");
+    
+    const params = new URLSearchParams({
+      where: "1=1",
+      outFields: "Stream_Name,Road_Name,Barrier_Status_Desc,Source_Name,LinealGain_Meas,Species,FUCriteria_Desc",
+      outSR: "4326",
+      f: "json",
+      returnGeometry: "true"
+    });
+    
+    const response = await fetch(`${WSDOT_BARRIERS_API}?${params}`);
+    
+    if (!response.ok) {
+      throw new Error(`WSDOT API error: ${response.status} ${response.statusText}`);
+    }
+    
+    const data = await response.json();
+    
+    if (!data.features || data.features.length === 0) {
+      console.warn("No barrier data received from WSDOT API");
+      return [];
+    }
+    
+    console.log(`Received ${data.features.length} barriers from WSDOT API`);
+    
+    // Filter barriers to only include those in Puget Sound watersheds
+    const pugetSoundBarriers = data.features.filter(feature => {
+      const streamName = feature.attributes.Stream_Name || "";
+      const roadName = feature.attributes.Road_Name || "";
+      const sourceName = feature.attributes.Source_Name || "";
+      
+      // Check if any Puget Sound watershed name appears in the barrier data
+      return PUGET_SOUND_WATERSHEDS.some(watershed => 
+        streamName.toLowerCase().includes(watershed.toLowerCase()) ||
+        roadName.toLowerCase().includes(watershed.toLowerCase()) ||
+        sourceName.toLowerCase().includes(watershed.toLowerCase())
+      );
+    });
+    
+    console.log(`Filtered to ${pugetSoundBarriers.length} barriers in Puget Sound watersheds`);
+    return pugetSoundBarriers;
+    
+  } catch (error) {
+    console.error("Error fetching fish passage barriers:", error);
+    return [];
+  }
+}
+
+/* =========================
+   ADD FISH BARRIERS TO MAP
+   ========================= */
+async function loadFishBarriers() {
+  try {
+    const barriers = await fetchFishBarriers();
+    
+    if (barriers.length === 0) {
+      console.warn("No fish passage barriers to display");
+      return;
+    }
+    
+    // Create layer group for barriers
+    barriersLayer = L.layerGroup();
+    
+    barriers.forEach((feature) => {
+      const attrs = feature.attributes;
+      const geometry = feature.geometry;
+      
+      // Extract coordinates
+      const lng = geometry.x;
+      const lat = geometry.y;
+      
+      if (!lat || !lng) {
+        return; // Skip if coordinates are missing
+      }
+      
+      // Extract barrier information
+      const barrierName = attrs.Road_Name || "Unnamed Barrier";
+      const barrierType = attrs.FUCriteria_Desc || "Culvert";
+      const streamName = attrs.Stream_Name || "Unknown Stream";
+      const habitatMiles = attrs.LinealGain_Meas || 0;
+      const status = attrs.Barrier_Status_Desc || "Uncorrected";
+      const species = attrs.Species || "Multiple species";
+      
+      // Create custom red triangle marker
+      const triangleIcon = L.divIcon({
+        className: 'barrier-marker',
+        html: '<div class="barrier-triangle"></div>',
+        iconSize: [16, 16],
+        iconAnchor: [8, 8]
+      });
+      
+      // Create marker with popup
+      const marker = L.marker([lat, lng], { icon: triangleIcon })
+        .bindPopup(`
+          <div class="barrier-popup">
+            <strong style="color: #dc2626; font-size: 1.05rem;">🚧 ${barrierName}</strong><br/>
+            <hr style="margin: 0.5rem 0; border: none; border-top: 1px solid #e5e7eb;"/>
+            <strong>Type:</strong> ${barrierType}<br/>
+            <strong>Stream:</strong> ${streamName}<br/>
+            <strong>Habitat Blocked:</strong> ${parseFloat(habitatMiles).toFixed(2)} miles<br/>
+            <strong>Status:</strong> ${status}<br/>
+            <strong>Species:</strong> ${species}
+          </div>
+        `, {
+          maxWidth: 300,
+          className: 'barrier-popup-content'
+        });
+      
+      barriersLayer.addLayer(marker);
+    });
+    
+    // Add barriers layer to map
+    barriersLayer.addTo(map);
+    
+    console.log(`Successfully added ${barriers.length} fish passage barriers to map`);
+    
+  } catch (error) {
+    console.error("Error loading fish barriers to map:", error);
+  }
+}
+
+/* =========================
+   TOGGLE FISH BARRIERS VISIBILITY
+   ========================= */
+function toggleBarriers() {
+  if (!barriersLayer) {
+    console.warn("Barriers layer not initialized");
+    return;
+  }
+  
+  if (barriersVisible) {
+    map.removeLayer(barriersLayer);
+    barriersVisible = false;
+    document.getElementById('toggle-barriers').textContent = '🔲 Show Fish Barriers';
+    console.log("Fish barriers hidden");
+  } else {
+    barriersLayer.addTo(map);
+    barriersVisible = true;
+    document.getElementById('toggle-barriers').textContent = '✅ Hide Fish Barriers';
+    console.log("Fish barriers visible");
+  }
+}
+
+
 /* =========================
    DASHBOARD INITIALIZATION
    ========================= */
 async function initDashboard() {
   await loadWatershedBoundaries();
+   await loadFishBarriers();
   
   try {
     let watershedData = await fetchWDFWData();
