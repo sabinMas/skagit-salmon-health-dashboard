@@ -15,7 +15,11 @@
 </head>
 
 <body>
+  
   <header>
+    <!-- Temperature Loading Indicator -->
+    <div id="temperature-loading">🌡️ Loading temperature data...</div>
+
     <h1>🐟 Puget Sound Watersheds — Chinook Salmon Population Health</h1>
     <p>Interactive analysis of salmon recovery with live WDFW data integration</p>
   </header>
@@ -35,6 +39,7 @@
           <span class="update-note">Last updated from live API</span>
         </div>
       <button id="toggle-barriers" onclick="toggleBarriers()">✅ Hide Fish Barriers</button>
+                    <button id="toggle-temperature" onclick="toggleTemperature()">✅ Hide Temperature</button>
       </section>
 
       </section>
