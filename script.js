@@ -414,6 +414,242 @@ const FALLBACK_WATERSHED_DATA = [
     tributaries: ["North Fork", "South Fork"]
   }
 ];
+/* =========================
+   HISTORICAL TIME SLIDER DATA
+   ========================= */
+
+// Generate historical data for time slider (1990-2024)
+function generateHistoricalData() {
+  const historicalData = [];
+  const startYear = 1990;
+  const endYear = 2024;
+  
+  FALLBACK_WATERSHED_DATA.forEach(watershed => {
+    const basePopulation = watershed.population;
+    const recoveryTarget = watershed.recoveryTarget;
+    
+    // Generate realistic historical variations
+    for (let year = startYear; year <= endYear; year++) {
+      // Create decline pattern from 1990-2010, then gradual recovery
+      let populationMultiplier;
+      
+      if (year <= 2000) {
+        // Decline period (1990-2000): 150% to 100% of current
+        populationMultiplier = 1.5 - ((2000 - year) / 10) * 0.5;
+      } else if (year <= 2010) {
+        // Continued decline (2000-2010): 100% to 70% of current
+        populationMultiplier = 1.0 - ((2010 - year) / 10) * 0.3;
+      } else {
+        // Recovery period (2010-2024): 70% to 100% of current
+        populationMultiplier = 0.7 + ((year - 2010) / 14) * 0.3;
+      }
+      
+      // Add realistic year-to-year variations (±10%)
+      const randomVariation = 0.9 + Math.random() * 0.2;
+      const population = Math.round(basePopulation * populationMultiplier * randomVariation);
+      
+      historicalData.push({
+        year: year,
+        watershed: watershed.watershed,
+        population: population,
+        recoveryTarget: recoveryTarget
+      });
+    }
+  });
+  
+  return historicalData;
+}
+
+// Store historical data globally
+let historicalTimeSeries = [];
+let watershedCircles = {}; // Store circle markers for updates
+let currentAnimationYear = 2024;
+let isAnimating = false;
+let animationInterval = null;
+let populationChart = null; // Store chart reference
+
+/* =========================
+   TIME SLIDER FUNCTIONS
+   ========================= */
+
+function updateYearDisplay(year) {
+  document.getElementById('current-year').textContent = year;
+  currentAnimationYear = year;
+  
+  // Update map circles for selected year
+  updateMapForYear(year);
+  
+  // Update chart highlight
+  updateChartHighlight(year);
+  
+  // Calculate and display year-over-year change
+  displayYearChange(year);
+}
+
+function updateMapForYear(year) {
+  const yearData = historicalTimeSeries.filter(d => d.year === year);
+  
+  yearData.forEach(data => {
+    const circleKey = data.watershed;
+    
+    if (watershedCircles[circleKey]) {
+      const circle = watershedCircles[circleKey];
+      
+      // Update circle radius based on population
+      const radius = Math.sqrt((data.population || 1) / Math.PI) * 150;
+      circle.setRadius(Math.max(radius, 5000));
+      
+      // Update circle color based on status
+      const color = getPopulationColor(data.population, data.recoveryTarget);
+      circle.setStyle({
+        fillColor: color,
+        color: "#1e293b"
+      });
+      
+      // Update popup content
+      const status = statusLabel(data.population, data.recoveryTarget);
+      circle.setPopupContent(`
+        <strong>${data.watershed}</strong><br/>
+        Year: ${year}<br/>
+        Population: ${data.population.toLocaleString()}<br/>
+        Target: ${data.recoveryTarget.toLocaleString()}<br/>
+        Status: ${status}
+      `);
+    }
+  });
+}
+
+function displayYearChange(year) {
+  const indicator = document.getElementById('year-change-indicator');
+  
+  if (year === 1990) {
+    indicator.textContent = '';
+    indicator.className = '';
+    return;
+  }
+  
+  const currentYearData = historicalTimeSeries.filter(d => d.year === year);
+  const previousYearData = historicalTimeSeries.filter(d => d.year === year - 1);
+  
+  // Calculate total population change
+  const currentTotal = currentYearData.reduce((sum, d) => sum + d.population, 0);
+  const previousTotal = previousYearData.reduce((sum, d) => sum + d.population, 0);
+  const change = currentTotal - previousTotal;
+  
+  if (change > 0) {
+    indicator.textContent = `↗ +${change.toLocaleString()} spawners from ${year - 1}`;
+    indicator.className = 'increase';
+  } else if (change < 0) {
+    indicator.textContent = `↘ ${change.toLocaleString()} spawners from ${year - 1}`;
+    indicator.className = 'decrease';
+  } else {
+    indicator.textContent = `→ No change from ${year - 1}`;
+    indicator.className = '';
+  }
+}
+
+function updateChartHighlight(year) {
+  // Update status content with selected year data
+  const yearData = historicalTimeSeries.filter(d => d.year === year);
+  const totalPop = yearData.reduce((sum, d) => sum + d.population, 0);
+  const totalTarget = yearData.reduce((sum, d) => sum + d.recoveryTarget, 0);
+  const percentOfTarget = totalTarget > 0 ? ((totalPop / totalTarget) * 100).toFixed(1) : "—";
+  
+  document.getElementById("status-content").innerHTML = `
+    <div class="status-card ${statusClass(totalPop, totalTarget)}">
+      <p><strong>📊 Puget Sound Region - ${year}</strong></p>
+      <p>Total Population: ${totalPop.toLocaleString()}</p>
+      <p>Regional Target: ${totalTarget.toLocaleString()}</p>
+      <p>Progress: ${percentOfTarget}% of recovery target</p>
+    </div>
+  `;
+}
+
+/* =========================
+   ANIMATION CONTROLS
+   ========================= */
+
+function toggleAnimation() {
+  const btn = document.getElementById('play-pause-btn');
+  
+  if (isAnimating) {
+    // Pause animation
+    clearInterval(animationInterval);
+    isAnimating = false;
+    btn.textContent = '▶️ Play';
+  } else {
+    // Start animation
+    isAnimating = true;
+    btn.textContent = '⏸️ Pause';
+    
+    animationInterval = setInterval(() => {
+      const slider = document.getElementById('year-slider');
+      let nextYear = parseInt(slider.value) + 1;
+      
+      if (nextYear > 2024) {
+        nextYear = 1990; // Loop back to start
+      }
+      
+      slider.value = nextYear;
+      updateYearDisplay(nextYear);
+    }, 1000); // 1 year per second
+  }
+}
+
+/* =========================
+   RECOVERY TARGET REFERENCE LINE
+   ========================= */
+
+function addRecoveryTargetLayer() {
+  const recoveryLegend = L.control({ position: "topright" });
+  
+  recoveryLegend.onAdd = function () {
+    const div = L.DomUtil.create("div", "recovery-legend");
+    div.style.background = "white";
+    div.style.padding = "12px";
+    div.style.borderRadius = "6px";
+    div.style.boxShadow = "0 0 15px rgba(0,0,0,0.2)";
+    div.style.fontFamily = "sans-serif";
+    div.style.fontSize = "13px";
+    div.style.maxWidth = "200px";
+    
+    div.innerHTML = `
+      <div style="font-weight:bold;margin-bottom:8px;color:#0f172a;">🎯 Recovery Target</div>
+      <div style="font-size:0.85rem;color:#64748b;line-height:1.5;">
+        Circle sizes represent spawner population. Colors show status relative to recovery goals.
+      </div>
+    `;
+    
+    return div;
+  };
+  
+  recoveryLegend.addTo(map);
+}
+
+/* =========================
+   INITIALIZE TIME SLIDER
+   ========================= */
+
+function initializeTimeSlider() {
+  // Generate historical data
+  historicalTimeSeries = generateHistoricalData();
+  
+  // Set up event listener for slider
+  const slider = document.getElementById('year-slider');
+  slider.addEventListener('input', (e) => {
+    const year = parseInt(e.target.value);
+    updateYearDisplay(year);
+  });
+  
+  // Set up play/pause button
+  const playBtn = document.getElementById('play-pause-btn');
+  playBtn.addEventListener('click', toggleAnimation);
+  
+  // Add recovery target reference
+  addRecoveryTargetLayer();
+  
+  console.log('Time slider initialized with data from 1990-2024');
+}
 
 /* =========================
    HELPER FUNCTIONS
