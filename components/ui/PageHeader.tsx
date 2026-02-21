@@ -1,3 +1,7 @@
+nano app/learn/educators/page.tsx  # Same change
+nano app/stewardship/[project]/page.tsx  # Same change
+
+
 interface PageHeaderProps {
   title: string;
   description?: string;

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageHeader from "@/components/ui/PageHeader";
+import { PageHeader } from "@/components/ui/PageHeader";
 
 interface Props {
   params: Promise<{ module: string }>;
