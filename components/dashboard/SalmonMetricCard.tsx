@@ -1,7 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { InfoTooltip } from '@/components/ui/InfoTooltip';
+import { InfoTooltip } from "@/components/ui/InfoTooltip";
+
+// or whatever your tooltip exports actually are
+
 
 interface SalmonMetricCardProps {
   label: string;
@@ -11,6 +14,11 @@ interface SalmonMetricCardProps {
   tooltipText?: string;
   href?: string;
 }
+// components/ui/InfoTooltip.tsx
+export function InfoTooltip({ text }: { text: string }) {
+  return <span>{text}</span>;
+}
+
 
 export function SalmonMetricCard({
   label,
@@ -34,10 +42,13 @@ export function SalmonMetricCard({
 
   const content = (
     <div className="bg-surface border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-      <div className="flex justify-between items-start mb-2">
-        <h3 className="text-sm font-medium text-muted">{label}</h3>
-        {tooltipText && <InfoTooltip content={tooltipText} />}
-      </div>
+    <div className="flex justify-between items-start mb-2">
+      <h3 className="text-sm font-medium text-muted">{label}</h3>
+        {tooltipText && <InfoTooltip text={tooltipText} />}
+    </div>
+
+
+
       <div className="flex items-baseline gap-2">
         <span className="text-3xl font-bold text-primary">{value}</span>
         {unit && <span className="text-lg text-muted">{unit}</span>}
