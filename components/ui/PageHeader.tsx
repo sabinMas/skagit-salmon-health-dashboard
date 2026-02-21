@@ -1,7 +1,3 @@
-nano app/learn/educators/page.tsx  # Same change
-nano app/stewardship/[project]/page.tsx  # Same change
-
-
 interface PageHeaderProps {
   title: string;
   description?: string;
@@ -17,3 +13,5 @@ export function PageHeader({ title, description }: PageHeaderProps) {
     </div>
   );
 }
+
+export default PageHeader;
