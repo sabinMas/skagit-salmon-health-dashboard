@@ -3,6 +3,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 
 interface Props {
   params: Promise<{ module: string }>;
+  subtitle: string;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
