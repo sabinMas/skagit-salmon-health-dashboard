@@ -91,6 +91,13 @@ Before stopping:
 
 ## Session Log
 
+### 2026-02-21 (session 5)
+- **M1.2** — Built `<IndicatorChart>` (`components/dashboard/IndicatorChart.tsx`) using Recharts: `AreaChart`/`LineChart`, `ResponsiveContainer`, gradient fill, custom tooltip, accessible `<figcaption>` summary, loading skeleton, empty state; exports `ChartDataPoint` type
+- **M1.6** — Rebuilt basin detail page (`app/dashboard/[basin]/page.tsx`) as a server component: fetches salmon return data server-side, passes to chart components; Chinook area chart, 6-species breakdown grid, env indicator charts, tribal connections block, `generateMetadata`
+- **M1.7** — Dashboard polish: map instruction caption, "Explore [basin] in detail →" link appears when watershed selected, temperature trend direction corrected
+- M1 milestone marked **COMPLETE** in TASKS.md
+- `npm run lint` ✅ `npm run build` ✅ all 15 routes
+
 ### 2026-02-21 (session 4)
 - Built `<WatershedMap>` component (`components/dashboard/WatershedMap.tsx`) using react-leaflet v5
 - Added `status: WatershedStatus` field to `Watershed` interface and all 9 mock watersheds in `lib/data/watersheds.ts`

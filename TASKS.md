@@ -9,7 +9,7 @@
 
 ```
 M0: Project Setup & Foundation          ██████████  COMPLETE
-M1: Dashboard MVP (mock data)           ██████░░░░  ~60% (in progress)
+M1: Dashboard MVP (mock data)           ██████████  COMPLETE ✅
 M2: Nations Template System             ███████░░░  ~70% (mostly complete)
 M3: Learn & Education Hub               ██░░░░░░░░  ~20% (started)
 M4: Stewardship & About Pages           █████░░░░░  ~50% (index pages done)
@@ -58,16 +58,12 @@ M7: Polish, Accessibility Audit, Launch ░░░░░░░░░░  ~0% (not
 ### Tasks
 
 - [x] **M1.1 — Build `<SalmonMetricCard>` component**
-- [ ] **M1.2 — Build `<IndicatorChart>` component** 🚧 NEXT
-  - Install Recharts
-  - Create time-series line/area chart component
-  - Add responsive behavior
-  - Add accessibility text summaries
+- [x] **M1.2 — Build `<IndicatorChart>` component** ✅
 - [x] **M1.3 — Build `<WatershedSelector>` component**
 - [x] **M1.4 — Build `<SpeciesFilter>` component**
 - [x] **M1.5 — Assemble Dashboard page (`/dashboard`)**
-- [ ] **M1.6 — Build basin detail page (`/dashboard/[basin]`)**
-- [ ] **M1.7 — Dashboard polish**
+- [x] **M1.6 — Build basin detail page (`/dashboard/[basin]`)** ✅
+- [x] **M1.7 — Dashboard polish** ✅
 - [x] **M1.8 — Build `<WatershedMap>` component** ✅
   - See detailed plan below
 
