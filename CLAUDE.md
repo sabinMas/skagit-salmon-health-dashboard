@@ -116,6 +116,13 @@ Before stopping:
 - Removed unused `PageHeader` import from `nations/[tribe]/page.tsx`
 - `npm run lint` → ✅ zero warnings/errors; `npm run build` → ✅ all 15 routes clean
 
+### 2026-02-21 (session 3)
+- M4.4 — Built `app/stewardship/[project]/page.tsx` as a proper server component
+- Fetches project by slug (from `lib/data/projects.ts`), watershed by slug, and all tribes
+- Renders: breadcrumb, header + active/completed badge, type + watershed meta pills, tribal attribution banner, project overview (with M6 CMS placeholder), impact metric cards, watershed dashboard link, linked tribal partner cards, footer nav
+- Handles tribeIds that don't match mock tribes data (formats slug → display name fallback)
+- `npm run build` → ✅ 15 routes compile cleanly
+
 ### 2026-02-21 (session 2)
 - Milestone 1 "Site Shell Complete" — all checklist items implemented, `npm run build` clean
 - Mobile hamburger nav in `SiteHeader.tsx` — animating bars, auto-closes on route change, `aria-expanded`

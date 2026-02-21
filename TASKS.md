@@ -200,7 +200,7 @@ PageHeader
 - [x] **M4.1 — Build `<ProjectCard>` component** (using Card)
 - [ ] **M4.2 — Build `<ProjectFilterBar>` component**
 - [x] **M4.3 — Assemble Stewardship index (`/stewardship`)**
-- [ ] **M4.4 — Assemble Stewardship detail template (`/stewardship/[project-slug]`)**
+- [x] **M4.4 — Assemble Stewardship detail template (`/stewardship/[project-slug]`)** ✅
 - [ ] **M4.5 — Create 3-4 sample project pages**
 - [x] **M4.6 — Assemble About page (`/about`)** ✅
 
