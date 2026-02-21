@@ -1,88 +1,83 @@
-// Mock adapter — Phase 1 (PLANNING.md §7)
-// All content is placeholder; no tribal knowledge is assumed here.
-// Swap for CMS API in M6.
+export interface Tribe {
+  id: string;
+  name: string;
+  slug: string;
+  displayName: string;
+  languageName?: string;
+  tagline: string;
+  websiteUrl?: string;
+}
 
-import type { Tribe } from "@/types";
-
-const TRIBES: Tribe[] = [
+const mockTribes: Tribe[] = [
   {
-    id: "tulalip",
-    name: "Tulalip Tribes",
-    slug: "tulalip",
-    tagline: "[Awaiting content from Tulalip Tribes]",
-    watershedIds: ["snohomish", "stillaguamish"],
-    approvalStatus: "draft",
+    id: '1',
+    name: 'Tulalip Tribes',
+    slug: 'tulalip',
+    displayName: 'Tulalip Tribes',
+    tagline: 'Stewarding salmon and watersheds in the Snohomish basin since time immemorial',
   },
   {
-    id: "muckleshoot",
-    name: "Muckleshoot Indian Tribe",
-    slug: "muckleshoot",
-    tagline: "[Awaiting content from Muckleshoot Indian Tribe]",
-    watershedIds: ["green", "cedar", "sammamish"],
-    approvalStatus: "draft",
+    id: '2',
+    name: 'Muckleshoot Indian Tribe',
+    slug: 'muckleshoot',
+    displayName: 'Muckleshoot Indian Tribe',
+    tagline: 'Protecting salmon habitat in the Green/Duwamish and White River watersheds',
   },
   {
-    id: "puyallup",
-    name: "Puyallup Tribe",
-    slug: "puyallup",
-    tagline: "[Awaiting content from Puyallup Tribe]",
-    watershedIds: ["puyallup"],
-    approvalStatus: "draft",
+    id: '3',
+    name: 'Puyallup Tribe',
+    slug: 'puyallup',
+    displayName: 'Puyallup Tribe of Indians',
+    tagline: 'Leading restoration efforts in the Puyallup River watershed',
   },
   {
-    id: "nisqually",
-    name: "Nisqually Indian Tribe",
-    slug: "nisqually",
-    tagline: "[Awaiting content from Nisqually Indian Tribe]",
-    watershedIds: ["nisqually"],
-    approvalStatus: "draft",
+    id: '4',
+    name: 'Nisqually Indian Tribe',
+    slug: 'nisqually',
+    displayName: 'Nisqually Indian Tribe',
+    tagline: 'Guardians of the Nisqually River and salmon populations',
   },
   {
-    id: "upper-skagit",
-    name: "Upper Skagit Indian Tribe",
-    slug: "upper-skagit",
-    tagline: "[Awaiting content from Upper Skagit Indian Tribe]",
-    watershedIds: ["skagit"],
-    approvalStatus: "draft",
+    id: '5',
+    name: 'Skokomish Indian Tribe',
+    slug: 'skokomish',
+    displayName: 'Skokomish Indian Tribe',
+    tagline: 'Restoring salmon runs in Hood Canal watersheds',
   },
   {
-    id: "sauk-suiattle",
-    name: "Sauk-Suiattle Indian Tribe",
-    slug: "sauk-suiattle",
-    tagline: "[Awaiting content from Sauk-Suiattle Indian Tribe]",
-    watershedIds: ["skagit", "stillaguamish"],
-    approvalStatus: "draft",
+    id: '6',
+    name: 'Stillaguamish Tribe',
+    slug: 'stillaguamish',
+    displayName: 'Stillaguamish Tribe of Indians',
+    tagline: 'Protecting salmon in the Stillaguamish River basin',
   },
   {
-    id: "skokomish",
-    name: "Skokomish Tribe",
-    slug: "skokomish",
-    tagline: "[Awaiting content from Skokomish Tribe]",
-    watershedIds: [],
-    approvalStatus: "draft",
+    id: '7',
+    name: 'Snoqualmie Tribe',
+    slug: 'snoqualmie',
+    displayName: 'Snoqualmie Indian Tribe',
+    tagline: 'Traditional stewards of the Snoqualmie River watershed',
   },
   {
-    id: "suquamish",
-    name: "Suquamish Tribe",
-    slug: "suquamish",
-    tagline: "[Awaiting content from Suquamish Tribe]",
-    watershedIds: ["cedar", "sammamish"],
-    approvalStatus: "draft",
+    id: '8',
+    name: 'Suquamish Tribe',
+    slug: 'suquamish',
+    displayName: 'Suquamish Tribe',
+    tagline: 'Caring for salmon across Central Puget Sound waters',
   },
   {
-    id: "stillaguamish",
-    name: "Stillaguamish Tribe",
-    slug: "stillaguamish",
-    tagline: "[Awaiting content from Stillaguamish Tribe]",
-    watershedIds: ["stillaguamish"],
-    approvalStatus: "draft",
+    id: '9',
+    name: 'Lummi Nation',
+    slug: 'lummi',
+    displayName: 'Lummi Nation',
+    tagline: 'Salmon people protecting Nooksack River and northern waters',
   },
 ];
 
-export function getTribes(): Tribe[] {
-  return TRIBES;
+export async function getTribes(): Promise<Tribe[]> {
+  return mockTribes;
 }
 
-export function getTribeBySlug(slug: string): Tribe | undefined {
-  return TRIBES.find((t) => t.slug === slug);
+export async function getTribeBySlug(slug: string): Promise<Tribe | undefined> {
+  return mockTribes.find((t) => t.slug === slug);
 }

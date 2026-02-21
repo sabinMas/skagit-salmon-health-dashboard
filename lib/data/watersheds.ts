@@ -1,24 +1,27 @@
-// Mock adapter — Phase 1 (PLANNING.md §7)
-// Data matches FALLBACK_WATERSHED_DATA in script.js
-// Swap internals for DB/API calls in M5; UI never changes.
-
-import type { Watershed } from "@/types";
-
-const WATERSHEDS: Watershed[] = [
-  { id: "skagit",        name: "Skagit",           slug: "skagit",        region: "North Puget Sound",   population: 8500,  recoveryTarget: 35000, latestYear: 2023, targetYear: 2050 },
-  { id: "stillaguamish", name: "Stillaguamish",     slug: "stillaguamish", region: "North Puget Sound",   population: 1200,  recoveryTarget: 17800, latestYear: 2023, targetYear: 2050 },
-  { id: "snohomish",     name: "Snohomish",         slug: "snohomish",     region: "Central Puget Sound", population: 2100,  recoveryTarget: 22400, latestYear: 2023, targetYear: 2050 },
-  { id: "cedar",         name: "Cedar",             slug: "cedar",         region: "Central Puget Sound", population: 890,   recoveryTarget: 14200, latestYear: 2023, targetYear: 2050 },
-  { id: "sammamish",     name: "Sammamish",         slug: "sammamish",     region: "Central Puget Sound", population: 340,   recoveryTarget: 8900,  latestYear: 2023, targetYear: 2050 },
-  { id: "green",         name: "Green / Duwamish",  slug: "green",         region: "South Puget Sound",   population: 1650,  recoveryTarget: 19500, latestYear: 2023, targetYear: 2050 },
-  { id: "puyallup",      name: "Puyallup",          slug: "puyallup",      region: "South Puget Sound",   population: 2800,  recoveryTarget: 24100, latestYear: 2023, targetYear: 2050 },
-  { id: "nisqually",     name: "Nisqually",         slug: "nisqually",     region: "South Puget Sound",   population: 3200,  recoveryTarget: 21000, latestYear: 2023, targetYear: 2050 },
-];
-
-export function getWatersheds(): Watershed[] {
-  return WATERSHEDS;
+export interface Watershed {
+  id: string;
+  name: string;
+  slug: string;
+  region: string;
+  areaSqKm: number;
 }
 
-export function getWatershedBySlug(slug: string): Watershed | undefined {
-  return WATERSHEDS.find((w) => w.slug === slug);
+const mockWatersheds: Watershed[] = [
+  { id: '1', name: 'Skagit River', slug: 'skagit', region: 'North Sound', areaSqKm: 8134 },
+  { id: '2', name: 'Snohomish River', slug: 'snohomish', region: 'Central Sound', areaSqKm: 4851 },
+  { id: '3', name: 'Lake Washington/Cedar/Sammamish', slug: 'lake-washington', region: 'Central Sound', areaSqKm: 1265 },
+  { id: '4', name: 'Green/Duwamish River', slug: 'green-duwamish', region: 'Central Sound', areaSqKm: 1945 },
+  { id: '5', name: 'Puyallup/White River', slug: 'puyallup-white', region: 'South Sound', areaSqKm: 2406 },
+  { id: '6', name: 'Nisqually River', slug: 'nisqually', region: 'South Sound', areaSqKm: 1979 },
+  { id: '7', name: 'Skokomish River', slug: 'skokomish', region: 'Hood Canal', areaSqKm: 623 },
+  { id: '8', name: 'Stillaguamish River', slug: 'stillaguamish', region: 'North Sound', areaSqKm: 1791 },
+  { id: '9', name: 'Nooksack River', slug: 'nooksack', region: 'North Sound', areaSqKm: 2145 },
+];
+
+export async function getWatersheds(): Promise<Watershed[]> {
+  return mockWatersheds;
+}
+
+export async function getWatershedBySlug(slug: string): Promise<Watershed | undefined> {
+  return mockWatersheds.find((w) => w.slug === slug);
 }
