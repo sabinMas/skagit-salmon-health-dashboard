@@ -1,5 +1,25 @@
 {
+  "type": "module",
   "dependencies": {
     "express": "^5.2.1"
-  }
+  },
+  "name": "puget-salmon-health",
+  "version": "1.0.0",
+  "description": "An interactive web-based dashboard visualizing the health and status of Chinook salmon populations across Puget Sound watersheds in Washington State. The project combines geospatial analysis, live population data, and environmental monitoring to support salmon recovery decision-making.",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabinMas/puget-salmon-health.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sabinMas/puget-salmon-health/issues"
+  },
+  "homepage": "https://github.com/sabinMas/puget-salmon-health#readme"
 }
