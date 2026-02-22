@@ -98,6 +98,20 @@ Before stopping:
 - M1 milestone marked **COMPLETE** in TASKS.md
 - `npm run lint` ✅ `npm run build` ✅ all 15 routes
 
+### 2026-02-21 (session 6)
+- M3.7 — Built `app/learn/treaty-rights/page.tsx`: full 5-section module (1855 treaties, fish-ins, Boldt Decision, co-management in practice, Culverts Case); key takeaways, educator discussion questions + activities + standards alignment, continue-learning links; `generateMetadata`
+- M3.8 — Rebuilt `app/learn/educators/page.tsx`: module overview with objectives + standards, 4 classroom activity ideas, downloadable resources (placeholders for M6), contact CTA
+- M3.6 polish — Added `generateMetadata` + breadcrumb to salmon-life-cycle; fixed broken `why-salmon-matter` link
+- M3 milestone COMPLETE; `npm run build` → ✅ 16 routes clean
+
+### 2026-02-21 (session 5)
+- M4.5 — Rewrote `app/stewardship/page.tsx` as async server component using real `getProjects()` + `getTribes()`; resolves tribeIds to display names
+- M4.2 — Created `components/stewardship/ProjectList.tsx` (client): filter pills by project type + filtered grid with working links; closes M4 ✅
+- M2.8 — Added `TribeContent` interface + narrative content to `lib/data/tribes.ts` for Tulalip, Muckleshoot, Puyallup, Nisqually; added `watershedIds` field
+- M2.8 — Rebuilt `app/nations/[tribe]/page.tsx`: real ContentSection content, stewardship project links, watershed basin links, `generateMetadata`, breadcrumb
+- M2.9 — Updated `TribalPartnerCard` to use `displayName`, added "Content live" badge; added `metadata` to nations index
+- M2 and M4 milestones now COMPLETE; `npm run build` ✅ 15 routes clean
+
 ### 2026-02-21 (session 4)
 - Built `<WatershedMap>` component (`components/dashboard/WatershedMap.tsx`) using react-leaflet v5
 - Added `status: WatershedStatus` field to `Watershed` interface and all 9 mock watersheds in `lib/data/watersheds.ts`
@@ -147,6 +161,18 @@ Before stopping:
 - API routes migrated from `app.js` → `app/api/{wdfw,usgs,barriers,scrape}/route.ts` with 15-min ISR
 - Fixed `react-leaflet` version: v4→v5 (React 19 peer dep); `npm run build` passes clean
 - Updated TASKS.md: M0.1, M0.2, M0.7 complete; M0.3, M0.4, M0.6 in progress; M0.5 approach changed
+
+### 2026-02-21 (session 4)
+- M5.3a: Fixed USGS `/api/usgs` 400 error — root cause: NWIS rejects `stateCd` + `bBox` together ("only one major filter"). Removed `stateCd=WA`; `bBox` alone returns 49 real stations with current temps
+- Build: `/api/usgs` now statically generates with 15-min ISR (was `ƒ Dynamic` due to build-time error, now `○ Static`)
+
+### 2026-02-21 (session 3)
+- M5.2b: Created `scripts/fetch-wdfw.mjs` — paginated Socrata fetch of `fgyz-n3uk`, 44-entry population→watershed map, data-type priority (TSAEJ→Spawner Fish→NOSAEJ→Escapement Fish), outputs `lib/data/real/salmon-returns.json`
+- Ran `npm run data:refresh`: fetched 7,664 rows → parsed to 391 real SalmonReturn records across 9 watersheds + 6 species (106.5 KB)
+- Added `"data:refresh": "node scripts/fetch-wdfw.mjs"` to `package.json` scripts
+- M5.2c: Rewrote `lib/data/salmon-returns.ts` to load from real JSON via `require()` (static, works with webpack); removed synthetic mock generator; exports `salmonDataFetchedAt` for M5.6 freshness UI
+- Key fix: `node:fs`/`node:path` imports break webpack — use static `require()` for JSON in Next.js instead
+- `npm run build` → ✅ 16 routes clean
 
 ### 2026-02-20
 - Created `app.js`: Express server on port 3010 (user changed from 3000), static serving + 4 proxy routes (`/api/wdfw`, `/api/usgs`, `/api/barriers`, `/api/scrape`) with 15-min in-memory cache

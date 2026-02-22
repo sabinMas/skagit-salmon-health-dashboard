@@ -1,0 +1,3917 @@
+{
+  "fetchedAt": "2026-02-21T23:50:44.526Z",
+  "source": "WDFW SPI Escapement — data.wa.gov/resource/fgyz-n3uk",
+  "recordCount": 391,
+  "returns": [
+    {
+      "id": "Mainstem Skagit Fall Chum-2010",
+      "watershedId": "1",
+      "speciesId": "3",
+      "year": 2010,
+      "countEstimate": 39535,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skagit Coho-2010",
+      "watershedId": "1",
+      "speciesId": "2",
+      "year": 2010,
+      "countEstimate": 31279,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Mainstem Skagit Fall Chum-2011",
+      "watershedId": "1",
+      "speciesId": "3",
+      "year": 2011,
+      "countEstimate": 15280,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skagit Coho-2011",
+      "watershedId": "1",
+      "speciesId": "2",
+      "year": 2011,
+      "countEstimate": 41061,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skagit Pink-2011",
+      "watershedId": "1",
+      "speciesId": "4",
+      "year": 2011,
+      "countEstimate": 560000,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Mainstem Skagit Fall Chum-2012",
+      "watershedId": "1",
+      "speciesId": "3",
+      "year": 2012,
+      "countEstimate": 36408,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skagit Coho-2012",
+      "watershedId": "1",
+      "speciesId": "2",
+      "year": 2012,
+      "countEstimate": 92687,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Mainstem Skagit Fall Chum-2013",
+      "watershedId": "1",
+      "speciesId": "3",
+      "year": 2013,
+      "countEstimate": 8545,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skagit Coho-2013",
+      "watershedId": "1",
+      "speciesId": "2",
+      "year": 2013,
+      "countEstimate": 84479,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skagit Pink-2013",
+      "watershedId": "1",
+      "speciesId": "4",
+      "year": 2013,
+      "countEstimate": 900000,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Mainstem Skagit Fall Chum-2014",
+      "watershedId": "1",
+      "speciesId": "3",
+      "year": 2014,
+      "countEstimate": 63553,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skagit Coho-2014",
+      "watershedId": "1",
+      "speciesId": "2",
+      "year": 2014,
+      "countEstimate": 24820,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Mainstem Skagit Fall Chum-2015",
+      "watershedId": "1",
+      "speciesId": "3",
+      "year": 2015,
+      "countEstimate": 7964,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skagit Coho-2015",
+      "watershedId": "1",
+      "speciesId": "2",
+      "year": 2015,
+      "countEstimate": 5794,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Mainstem Skagit Fall Chum-2016",
+      "watershedId": "1",
+      "speciesId": "3",
+      "year": 2016,
+      "countEstimate": 33709,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skagit Coho-2016",
+      "watershedId": "1",
+      "speciesId": "2",
+      "year": 2016,
+      "countEstimate": 35823,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Mainstem Skagit Fall Chum-2017",
+      "watershedId": "1",
+      "speciesId": "3",
+      "year": 2017,
+      "countEstimate": 6700,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skagit Coho-2017",
+      "watershedId": "1",
+      "speciesId": "2",
+      "year": 2017,
+      "countEstimate": 17957,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skagit Pink-2017",
+      "watershedId": "1",
+      "speciesId": "4",
+      "year": 2017,
+      "countEstimate": 110000,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Mainstem Skagit Fall Chum-2018",
+      "watershedId": "1",
+      "speciesId": "3",
+      "year": 2018,
+      "countEstimate": 18514,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skagit Coho-2018",
+      "watershedId": "1",
+      "speciesId": "2",
+      "year": 2018,
+      "countEstimate": 18657,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Mainstem Skagit Fall Chum-2019",
+      "watershedId": "1",
+      "speciesId": "3",
+      "year": 2019,
+      "countEstimate": 3127,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skagit Coho-2019",
+      "watershedId": "1",
+      "speciesId": "2",
+      "year": 2019,
+      "countEstimate": 14246,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skagit Pink-2019",
+      "watershedId": "1",
+      "speciesId": "4",
+      "year": 2019,
+      "countEstimate": 300000,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Mainstem Skagit Fall Chum-2020",
+      "watershedId": "1",
+      "speciesId": "3",
+      "year": 2020,
+      "countEstimate": 13705,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skagit Coho-2020",
+      "watershedId": "1",
+      "speciesId": "2",
+      "year": 2020,
+      "countEstimate": 23808,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Mainstem Skagit Fall Chum-2021",
+      "watershedId": "1",
+      "speciesId": "3",
+      "year": 2021,
+      "countEstimate": 22327,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skagit Coho-2021",
+      "watershedId": "1",
+      "speciesId": "2",
+      "year": 2021,
+      "countEstimate": 75532,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skagit Pink-2021",
+      "watershedId": "1",
+      "speciesId": "4",
+      "year": 2021,
+      "countEstimate": 460000,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Mainstem Skagit Fall Chum-2022",
+      "watershedId": "1",
+      "speciesId": "3",
+      "year": 2022,
+      "countEstimate": 45260,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skagit Coho-2022",
+      "watershedId": "1",
+      "speciesId": "2",
+      "year": 2022,
+      "countEstimate": 92306,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Mainstem Skagit Fall Chum-2023",
+      "watershedId": "1",
+      "speciesId": "3",
+      "year": 2023,
+      "countEstimate": 3147,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skagit Coho-2023",
+      "watershedId": "1",
+      "speciesId": "2",
+      "year": 2023,
+      "countEstimate": 54443,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skagit Pink-2023",
+      "watershedId": "1",
+      "speciesId": "4",
+      "year": 2023,
+      "countEstimate": 470000,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skykomish Chinook-2010",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2010,
+      "countEstimate": 2512,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Snohomish Coho-2010",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2010,
+      "countEstimate": 49239,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Snohomish Even-Year Pink-2010",
+      "watershedId": "2",
+      "speciesId": "4",
+      "year": 2010,
+      "countEstimate": 24,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Snoqualmie Chinook-2010",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2010,
+      "countEstimate": 1788,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "South Fork Skykomish Coho-2010",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2010,
+      "countEstimate": 8461,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skykomish Chinook-2011",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2011,
+      "countEstimate": 1181,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Snohomish Coho-2011",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2011,
+      "countEstimate": 111524,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Snohomish Odd-Year Pink-2011",
+      "watershedId": "2",
+      "speciesId": "4",
+      "year": 2011,
+      "countEstimate": 433326,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Snoqualmie Chinook-2011",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2011,
+      "countEstimate": 702,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "South Fork Skykomish Coho-2011",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2011,
+      "countEstimate": 27742,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skykomish Chinook-2012",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2012,
+      "countEstimate": 3745,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Snohomish Coho-2012",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2012,
+      "countEstimate": 130859,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Snoqualmie Chinook-2012",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2012,
+      "countEstimate": 1379,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "South Fork Skykomish Coho-2012",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2012,
+      "countEstimate": 19717,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skykomish Chinook-2013",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2013,
+      "countEstimate": 2355,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Snohomish Coho-2013",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2013,
+      "countEstimate": 126190,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Snohomish Odd-Year Pink-2013",
+      "watershedId": "2",
+      "speciesId": "4",
+      "year": 2013,
+      "countEstimate": 1907088,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Snoqualmie Chinook-2013",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2013,
+      "countEstimate": 889,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "South Fork Skykomish Coho-2013",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2013,
+      "countEstimate": 20887,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skykomish Chinook-2014",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2014,
+      "countEstimate": 3063,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Snohomish Coho-2014",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2014,
+      "countEstimate": 46620,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Snohomish Even-Year Pink-2014",
+      "watershedId": "2",
+      "speciesId": "4",
+      "year": 2014,
+      "countEstimate": 46,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Snoqualmie Chinook-2014",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2014,
+      "countEstimate": 838,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "South Fork Skykomish Coho-2014",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2014,
+      "countEstimate": 11071,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skykomish Chinook-2015",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2015,
+      "countEstimate": 3034,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Snohomish Coho-2015",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2015,
+      "countEstimate": 12987,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Snohomish Odd-Year Pink-2015",
+      "watershedId": "2",
+      "speciesId": "4",
+      "year": 2015,
+      "countEstimate": 389446,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Snoqualmie Chinook-2015",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2015,
+      "countEstimate": 829,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "South Fork Skykomish Coho-2015",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2015,
+      "countEstimate": 6507,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skykomish Chinook-2016",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2016,
+      "countEstimate": 3785,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Snohomish Coho-2016",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2016,
+      "countEstimate": 44416,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Snohomish Even-Year Pink-2016",
+      "watershedId": "2",
+      "speciesId": "4",
+      "year": 2016,
+      "countEstimate": 11,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Snoqualmie Chinook-2016",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2016,
+      "countEstimate": 1368,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "South Fork Skykomish Coho-2016",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2016,
+      "countEstimate": 12762,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skykomish Chinook-2017",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2017,
+      "countEstimate": 4374,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Snohomish Coho-2017",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2017,
+      "countEstimate": 18362,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Snohomish Odd-Year Pink-2017",
+      "watershedId": "2",
+      "speciesId": "4",
+      "year": 2017,
+      "countEstimate": 57491,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Snoqualmie Chinook-2017",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2017,
+      "countEstimate": 1745,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "South Fork Skykomish Coho-2017",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2017,
+      "countEstimate": 3384,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skykomish Chinook-2018",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2018,
+      "countEstimate": 3048,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Snohomish Coho-2018",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2018,
+      "countEstimate": 57226,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Snoqualmie Chinook-2018",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2018,
+      "countEstimate": 1162,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "South Fork Skykomish Coho-2018",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2018,
+      "countEstimate": 10733,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skykomish Chinook-2019",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2019,
+      "countEstimate": 966,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Snohomish Coho-2019",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2019,
+      "countEstimate": 39902,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Snohomish Even-Year Pink-2019",
+      "watershedId": "2",
+      "speciesId": "4",
+      "year": 2019,
+      "countEstimate": 0,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Snohomish Odd-Year Pink-2019",
+      "watershedId": "2",
+      "speciesId": "4",
+      "year": 2019,
+      "countEstimate": 595953,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Snoqualmie Chinook-2019",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2019,
+      "countEstimate": 676,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skykomish Chinook-2020",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2020,
+      "countEstimate": 2722,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Snohomish Coho-2020",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2020,
+      "countEstimate": 41669,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Snoqualmie Chinook-2020",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2020,
+      "countEstimate": 1211,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "South Fork Skykomish Coho-2020",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2020,
+      "countEstimate": 8206,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skykomish Chinook-2021",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2021,
+      "countEstimate": 607,
+      "method": "Hatchery-Origin Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Snohomish Coho-2021",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2021,
+      "countEstimate": 96886,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Snohomish Odd-Year Pink-2021",
+      "watershedId": "2",
+      "speciesId": "4",
+      "year": 2021,
+      "countEstimate": 753465,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Snoqualmie Chinook-2021",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2021,
+      "countEstimate": 978,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skykomish Chinook-2022",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2022,
+      "countEstimate": 1575,
+      "method": "Hatchery-Origin Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Snohomish Coho-2022",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2022,
+      "countEstimate": 83148,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Snoqualmie Chinook-2022",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2022,
+      "countEstimate": 1281,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skykomish Chinook-2023",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2023,
+      "countEstimate": 1060,
+      "method": "Hatchery-Origin Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Snohomish Coho-2023",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2023,
+      "countEstimate": 62742,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Snoqualmie Chinook-2023",
+      "watershedId": "2",
+      "speciesId": "1",
+      "year": 2023,
+      "countEstimate": 645,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Snohomish Coho-2024",
+      "watershedId": "2",
+      "speciesId": "2",
+      "year": 2024,
+      "countEstimate": 73684,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Cedar Chinook-2010",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2010,
+      "countEstimate": 655,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Cedar Sockeye-2010",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2010,
+      "countEstimate": 66910,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Lake Washington Beach Spawning Sockeye-2010",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2010,
+      "countEstimate": 250,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Lake Washington-Sammamish Tribs Sockeye-2010",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2010,
+      "countEstimate": 16716,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Sammamish Chinook-2010",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2010,
+      "countEstimate": 1831,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Cedar Chinook-2011",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2011,
+      "countEstimate": 805,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Cedar Sockeye-2011",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2011,
+      "countEstimate": 30346,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Lake Washington Beach Spawning Sockeye-2011",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2011,
+      "countEstimate": 50,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Lake Washington-Sammamish Tribs Sockeye-2011",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2011,
+      "countEstimate": 1414,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Sammamish Chinook-2011",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2011,
+      "countEstimate": 733,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Cedar Chinook-2012",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2012,
+      "countEstimate": 1050,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Cedar Sockeye-2012",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2012,
+      "countEstimate": 101135,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Lake Washington Beach Spawning Sockeye-2012",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2012,
+      "countEstimate": 100,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Lake Washington-Sammamish Tribs Sockeye-2012",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2012,
+      "countEstimate": 9730,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Sammamish Chinook-2012",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2012,
+      "countEstimate": 2034,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Cedar Chinook-2013",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2013,
+      "countEstimate": 1810,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Cedar Sockeye-2013",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2013,
+      "countEstimate": 147056,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Lake Washington Beach Spawning Sockeye-2013",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2013,
+      "countEstimate": 0,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Lake Washington-Sammamish Tribs Sockeye-2013",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2013,
+      "countEstimate": 5964,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Sammamish Chinook-2013",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2013,
+      "countEstimate": 2333,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Cedar Chinook-2014",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2014,
+      "countEstimate": 568,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Cedar Sockeye-2014",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2014,
+      "countEstimate": 16791,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Lake Washington Beach Spawning Sockeye-2014",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2014,
+      "countEstimate": 0,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Lake Washington-Sammamish Tribs Sockeye-2014",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2014,
+      "countEstimate": 3012,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Sammamish Chinook-2014",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2014,
+      "countEstimate": 482,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Cedar Chinook-2015",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2015,
+      "countEstimate": 1798,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Cedar Sockeye-2015",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2015,
+      "countEstimate": 10431,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Lake Washington Beach Spawning Sockeye-2015",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2015,
+      "countEstimate": 0,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Lake Washington-Sammamish Tribs Sockeye-2015",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2015,
+      "countEstimate": 547,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Sammamish Chinook-2015",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2015,
+      "countEstimate": 988,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Cedar Chinook-2016",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2016,
+      "countEstimate": 1025,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Cedar Sockeye-2016",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2016,
+      "countEstimate": 11777,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Lake Washington Beach Spawning Sockeye-2016",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2016,
+      "countEstimate": 0,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Lake Washington-Sammamish Tribs Sockeye-2016",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2016,
+      "countEstimate": 1328,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Sammamish Chinook-2016",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2016,
+      "countEstimate": 1247,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Cedar Chinook-2017",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2017,
+      "countEstimate": 2033,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Cedar Sockeye-2017",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2017,
+      "countEstimate": 38105,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Lake Washington Beach Spawning Sockeye-2017",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2017,
+      "countEstimate": 0,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Lake Washington-Sammamish Tribs Sockeye-2017",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2017,
+      "countEstimate": 3795,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Sammamish Chinook-2017",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2017,
+      "countEstimate": 1524,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Cedar Chinook-2018",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2018,
+      "countEstimate": 803,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Cedar Sockeye-2018",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2018,
+      "countEstimate": 3686,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Lake Washington Beach Spawning Sockeye-2018",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2018,
+      "countEstimate": 0,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Lake Washington-Sammamish Tribs Sockeye-2018",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2018,
+      "countEstimate": 897,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Sammamish Chinook-2018",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2018,
+      "countEstimate": 659,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Cedar Chinook-2019",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2019,
+      "countEstimate": 855,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Cedar Sockeye-2019",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2019,
+      "countEstimate": 1607,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Lake Washington Beach Spawning Sockeye-2019",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2019,
+      "countEstimate": 0,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Lake Washington-Sammamish Tribs Sockeye-2019",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2019,
+      "countEstimate": 611,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Sammamish Chinook-2019",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2019,
+      "countEstimate": 365,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Cedar Chinook-2020",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2020,
+      "countEstimate": 503,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Cedar Sockeye-2020",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2020,
+      "countEstimate": 2068,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Lake Washington-Sammamish Tribs Sockeye-2020",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2020,
+      "countEstimate": 549,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Sammamish Chinook-2020",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2020,
+      "countEstimate": 1706,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Cedar Chinook-2021",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2021,
+      "countEstimate": 940,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Cedar Sockeye-2021",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2021,
+      "countEstimate": 18602,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Lake Washington-Sammamish Tribs Sockeye-2021",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2021,
+      "countEstimate": 1341,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Sammamish Chinook-2021",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2021,
+      "countEstimate": 2454,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Cedar Chinook-2022",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2022,
+      "countEstimate": 890,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Cedar Sockeye-2022",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2022,
+      "countEstimate": 7160,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Sammamish Chinook-2022",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2022,
+      "countEstimate": 3196,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Cedar Chinook-2023",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2023,
+      "countEstimate": 648,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Cedar Sockeye-2023",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2023,
+      "countEstimate": 7041,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Sammamish Chinook-2023",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2023,
+      "countEstimate": 2110,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Cedar Chinook-2024",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2024,
+      "countEstimate": 640,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Cedar Sockeye-2024",
+      "watershedId": "3",
+      "speciesId": "5",
+      "year": 2024,
+      "countEstimate": 4531,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Sammamish Chinook-2024",
+      "watershedId": "3",
+      "speciesId": "1",
+      "year": 2024,
+      "countEstimate": 2346,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Green River (Duwamish) Chinook-2010",
+      "watershedId": "4",
+      "speciesId": "1",
+      "year": 2010,
+      "countEstimate": 2092,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Green River-Soos Creek Coho-2010",
+      "watershedId": "4",
+      "speciesId": "2",
+      "year": 2010,
+      "countEstimate": 2748,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Green River (Duwamish) Chinook-2011",
+      "watershedId": "4",
+      "speciesId": "1",
+      "year": 2011,
+      "countEstimate": 993,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Green River-Soos Creek Coho-2011",
+      "watershedId": "4",
+      "speciesId": "2",
+      "year": 2011,
+      "countEstimate": 2668,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Green River (Duwamish) Chinook-2012",
+      "watershedId": "4",
+      "speciesId": "1",
+      "year": 2012,
+      "countEstimate": 3090,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Green River-Soos Creek Coho-2012",
+      "watershedId": "4",
+      "speciesId": "2",
+      "year": 2012,
+      "countEstimate": 3715,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Green River (Duwamish) Chinook-2013",
+      "watershedId": "4",
+      "speciesId": "1",
+      "year": 2013,
+      "countEstimate": 2041,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Green River-Soos Creek Coho-2013",
+      "watershedId": "4",
+      "speciesId": "2",
+      "year": 2013,
+      "countEstimate": 4647,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Green River (Duwamish) Chinook-2014",
+      "watershedId": "4",
+      "speciesId": "1",
+      "year": 2014,
+      "countEstimate": 2730,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Green River-Soos Creek Coho-2014",
+      "watershedId": "4",
+      "speciesId": "2",
+      "year": 2014,
+      "countEstimate": 2941,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Green River (Duwamish) Chinook-2015",
+      "watershedId": "4",
+      "speciesId": "1",
+      "year": 2015,
+      "countEstimate": 4087,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Green River-Soos Creek Coho-2015",
+      "watershedId": "4",
+      "speciesId": "2",
+      "year": 2015,
+      "countEstimate": 619,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Green River (Duwamish) Chinook-2016",
+      "watershedId": "4",
+      "speciesId": "1",
+      "year": 2016,
+      "countEstimate": 10063,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Green River-Soos Creek Coho-2016",
+      "watershedId": "4",
+      "speciesId": "2",
+      "year": 2016,
+      "countEstimate": 3460,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Green River (Duwamish) Chinook-2017",
+      "watershedId": "4",
+      "speciesId": "1",
+      "year": 2017,
+      "countEstimate": 8357,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Green River-Soos Creek Coho-2017",
+      "watershedId": "4",
+      "speciesId": "2",
+      "year": 2017,
+      "countEstimate": 469,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Green River (Duwamish) Chinook-2018",
+      "watershedId": "4",
+      "speciesId": "1",
+      "year": 2018,
+      "countEstimate": 6891,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Green River-Soos Creek Coho-2018",
+      "watershedId": "4",
+      "speciesId": "2",
+      "year": 2018,
+      "countEstimate": 1364,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Green River (Duwamish) Chinook-2019",
+      "watershedId": "4",
+      "speciesId": "1",
+      "year": 2019,
+      "countEstimate": 2976,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Green River-Soos Creek Coho-2019",
+      "watershedId": "4",
+      "speciesId": "2",
+      "year": 2019,
+      "countEstimate": 774,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Green River (Duwamish) Chinook-2020",
+      "watershedId": "4",
+      "speciesId": "1",
+      "year": 2020,
+      "countEstimate": 4300,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Green River-Soos Creek Coho-2020",
+      "watershedId": "4",
+      "speciesId": "2",
+      "year": 2020,
+      "countEstimate": 1117,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Green River (Duwamish) Chinook-2021",
+      "watershedId": "4",
+      "speciesId": "1",
+      "year": 2021,
+      "countEstimate": 3070,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Green River-Soos Creek Coho-2021",
+      "watershedId": "4",
+      "speciesId": "2",
+      "year": 2021,
+      "countEstimate": 1681,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Green River (Duwamish) Chinook-2022",
+      "watershedId": "4",
+      "speciesId": "1",
+      "year": 2022,
+      "countEstimate": 5587,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Green River-Soos Creek Coho-2022",
+      "watershedId": "4",
+      "speciesId": "2",
+      "year": 2022,
+      "countEstimate": 67,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Green River (Duwamish) Chinook-2023",
+      "watershedId": "4",
+      "speciesId": "1",
+      "year": 2023,
+      "countEstimate": 1713,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Green River-Soos Creek Coho-2023",
+      "watershedId": "4",
+      "speciesId": "2",
+      "year": 2023,
+      "countEstimate": 1168,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Green River (Duwamish) Chinook-2024",
+      "watershedId": "4",
+      "speciesId": "1",
+      "year": 2024,
+      "countEstimate": 5644,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Green River-Soos Creek Coho-2024",
+      "watershedId": "4",
+      "speciesId": "2",
+      "year": 2024,
+      "countEstimate": 2942,
+      "method": "Total Natural Escapement",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Puyallup-Carbon Fall Chum-2010",
+      "watershedId": "5",
+      "speciesId": "3",
+      "year": 2010,
+      "countEstimate": 6855,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Puyallup Chinook-2010",
+      "watershedId": "5",
+      "speciesId": "1",
+      "year": 2010,
+      "countEstimate": 1508,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "White River (Puyallup) Coho-2010",
+      "watershedId": "5",
+      "speciesId": "2",
+      "year": 2010,
+      "countEstimate": 4556,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Puyallup-Carbon Fall Chum-2011",
+      "watershedId": "5",
+      "speciesId": "3",
+      "year": 2011,
+      "countEstimate": 12277,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Puyallup Chinook-2011",
+      "watershedId": "5",
+      "speciesId": "1",
+      "year": 2011,
+      "countEstimate": 1268,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Puyallup Pink-2011",
+      "watershedId": "5",
+      "speciesId": "4",
+      "year": 2011,
+      "countEstimate": 792795,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "White River (Puyallup) Coho-2011",
+      "watershedId": "5",
+      "speciesId": "2",
+      "year": 2011,
+      "countEstimate": 23770,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Puyallup-Carbon Fall Chum-2012",
+      "watershedId": "5",
+      "speciesId": "3",
+      "year": 2012,
+      "countEstimate": 493,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Puyallup Chinook-2012",
+      "watershedId": "5",
+      "speciesId": "1",
+      "year": 2012,
+      "countEstimate": 1037,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "White River (Puyallup) Coho-2012",
+      "watershedId": "5",
+      "speciesId": "2",
+      "year": 2012,
+      "countEstimate": 23795,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Puyallup-Carbon Fall Chum-2013",
+      "watershedId": "5",
+      "speciesId": "3",
+      "year": 2013,
+      "countEstimate": 695,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Puyallup Chinook-2013",
+      "watershedId": "5",
+      "speciesId": "1",
+      "year": 2013,
+      "countEstimate": 609,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Puyallup Pink-2013",
+      "watershedId": "5",
+      "speciesId": "4",
+      "year": 2013,
+      "countEstimate": 612501,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "White River (Puyallup) Coho-2013",
+      "watershedId": "5",
+      "speciesId": "2",
+      "year": 2013,
+      "countEstimate": 5854,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Puyallup-Carbon Fall Chum-2014",
+      "watershedId": "5",
+      "speciesId": "3",
+      "year": 2014,
+      "countEstimate": 2491,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Puyallup Chinook-2014",
+      "watershedId": "5",
+      "speciesId": "1",
+      "year": 2014,
+      "countEstimate": 1261,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "White River (Puyallup) Coho-2014",
+      "watershedId": "5",
+      "speciesId": "2",
+      "year": 2014,
+      "countEstimate": 9493,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Puyallup-Carbon Fall Chum-2015",
+      "watershedId": "5",
+      "speciesId": "3",
+      "year": 2015,
+      "countEstimate": 396,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Puyallup Chinook-2015",
+      "watershedId": "5",
+      "speciesId": "1",
+      "year": 2015,
+      "countEstimate": 1560,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Puyallup Pink-2015",
+      "watershedId": "5",
+      "speciesId": "4",
+      "year": 2015,
+      "countEstimate": 626096,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "White River (Puyallup) Coho-2015",
+      "watershedId": "5",
+      "speciesId": "2",
+      "year": 2015,
+      "countEstimate": 9593,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Puyallup-Carbon Fall Chum-2016",
+      "watershedId": "5",
+      "speciesId": "3",
+      "year": 2016,
+      "countEstimate": 507,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Puyallup Chinook-2016",
+      "watershedId": "5",
+      "speciesId": "1",
+      "year": 2016,
+      "countEstimate": 2535,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "White River (Puyallup) Coho-2016",
+      "watershedId": "5",
+      "speciesId": "2",
+      "year": 2016,
+      "countEstimate": 13406,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Puyallup-Carbon Fall Chum-2017",
+      "watershedId": "5",
+      "speciesId": "3",
+      "year": 2017,
+      "countEstimate": 3359,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Puyallup Chinook-2017",
+      "watershedId": "5",
+      "speciesId": "1",
+      "year": 2017,
+      "countEstimate": 1486,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Puyallup Pink-2017",
+      "watershedId": "5",
+      "speciesId": "4",
+      "year": 2017,
+      "countEstimate": 85374,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "White River (Puyallup) Coho-2017",
+      "watershedId": "5",
+      "speciesId": "2",
+      "year": 2017,
+      "countEstimate": 15986,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Puyallup-Carbon Fall Chum-2018",
+      "watershedId": "5",
+      "speciesId": "3",
+      "year": 2018,
+      "countEstimate": 1196,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Puyallup Chinook-2018",
+      "watershedId": "5",
+      "speciesId": "1",
+      "year": 2018,
+      "countEstimate": 2319,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "White River (Puyallup) Coho-2018",
+      "watershedId": "5",
+      "speciesId": "2",
+      "year": 2018,
+      "countEstimate": 11589,
+      "method": "Trap Count",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Puyallup Chinook-2019",
+      "watershedId": "5",
+      "speciesId": "1",
+      "year": 2019,
+      "countEstimate": 1688,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Puyallup Pink-2019",
+      "watershedId": "5",
+      "speciesId": "4",
+      "year": 2019,
+      "countEstimate": 515546,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Puyallup Chinook-2020",
+      "watershedId": "5",
+      "speciesId": "1",
+      "year": 2020,
+      "countEstimate": 1755,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Puyallup Chinook-2021",
+      "watershedId": "5",
+      "speciesId": "1",
+      "year": 2021,
+      "countEstimate": 4987,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Puyallup Chinook-2022",
+      "watershedId": "5",
+      "speciesId": "1",
+      "year": 2022,
+      "countEstimate": 3542,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Puyallup Chinook-2023",
+      "watershedId": "5",
+      "speciesId": "1",
+      "year": 2023,
+      "countEstimate": 3893,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Nisqually Chinook-2010",
+      "watershedId": "6",
+      "speciesId": "1",
+      "year": 2010,
+      "countEstimate": 2195,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Coho-2010",
+      "watershedId": "6",
+      "speciesId": "2",
+      "year": 2010,
+      "countEstimate": 151,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Winter Chum-2010",
+      "watershedId": "6",
+      "speciesId": "3",
+      "year": 2010,
+      "countEstimate": 64176,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Chinook-2011",
+      "watershedId": "6",
+      "speciesId": "1",
+      "year": 2011,
+      "countEstimate": 2264,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Coho-2011",
+      "watershedId": "6",
+      "speciesId": "2",
+      "year": 2011,
+      "countEstimate": 220,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Pink-2011",
+      "watershedId": "6",
+      "speciesId": "4",
+      "year": 2011,
+      "countEstimate": 657234,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Winter Chum-2011",
+      "watershedId": "6",
+      "speciesId": "3",
+      "year": 2011,
+      "countEstimate": 57309,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Chinook-2012",
+      "watershedId": "6",
+      "speciesId": "1",
+      "year": 2012,
+      "countEstimate": 2467,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Coho-2012",
+      "watershedId": "6",
+      "speciesId": "2",
+      "year": 2012,
+      "countEstimate": 3891,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Winter Chum-2012",
+      "watershedId": "6",
+      "speciesId": "3",
+      "year": 2012,
+      "countEstimate": 14806,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Chinook-2013",
+      "watershedId": "6",
+      "speciesId": "1",
+      "year": 2013,
+      "countEstimate": 1671,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Coho-2013",
+      "watershedId": "6",
+      "speciesId": "2",
+      "year": 2013,
+      "countEstimate": 2136,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Pink-2013",
+      "watershedId": "6",
+      "speciesId": "4",
+      "year": 2013,
+      "countEstimate": 763662,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Winter Chum-2013",
+      "watershedId": "6",
+      "speciesId": "3",
+      "year": 2013,
+      "countEstimate": 16460,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Chinook-2014",
+      "watershedId": "6",
+      "speciesId": "1",
+      "year": 2014,
+      "countEstimate": 1040,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Coho-2014",
+      "watershedId": "6",
+      "speciesId": "2",
+      "year": 2014,
+      "countEstimate": 57,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Winter Chum-2014",
+      "watershedId": "6",
+      "speciesId": "3",
+      "year": 2014,
+      "countEstimate": 37930,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nisqually Chinook-2015",
+      "watershedId": "6",
+      "speciesId": "1",
+      "year": 2015,
+      "countEstimate": 1505,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nisqually Coho-2015",
+      "watershedId": "6",
+      "speciesId": "2",
+      "year": 2015,
+      "countEstimate": 59,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nisqually Pink-2015",
+      "watershedId": "6",
+      "speciesId": "4",
+      "year": 2015,
+      "countEstimate": 221658,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nisqually Winter Chum-2015",
+      "watershedId": "6",
+      "speciesId": "3",
+      "year": 2015,
+      "countEstimate": 19876,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nisqually Chinook-2016",
+      "watershedId": "6",
+      "speciesId": "1",
+      "year": 2016,
+      "countEstimate": 964,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nisqually Coho-2016",
+      "watershedId": "6",
+      "speciesId": "2",
+      "year": 2016,
+      "countEstimate": 1839,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nisqually Winter Chum-2016",
+      "watershedId": "6",
+      "speciesId": "3",
+      "year": 2016,
+      "countEstimate": 13950,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nisqually Chinook-2017",
+      "watershedId": "6",
+      "speciesId": "1",
+      "year": 2017,
+      "countEstimate": 1622,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nisqually Pink-2017",
+      "watershedId": "6",
+      "speciesId": "4",
+      "year": 2017,
+      "countEstimate": 37665,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nisqually Winter Chum-2017",
+      "watershedId": "6",
+      "speciesId": "3",
+      "year": 2017,
+      "countEstimate": 54262,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nisqually Chinook-2018",
+      "watershedId": "6",
+      "speciesId": "1",
+      "year": 2018,
+      "countEstimate": 606,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nisqually Winter Chum-2018",
+      "watershedId": "6",
+      "speciesId": "3",
+      "year": 2018,
+      "countEstimate": 29287,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nisqually Chinook-2019",
+      "watershedId": "6",
+      "speciesId": "1",
+      "year": 2019,
+      "countEstimate": 392,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nisqually Pink-2019",
+      "watershedId": "6",
+      "speciesId": "4",
+      "year": 2019,
+      "countEstimate": 416857,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nisqually Chinook-2020",
+      "watershedId": "6",
+      "speciesId": "1",
+      "year": 2020,
+      "countEstimate": 572,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Nisqually Chinook-2021",
+      "watershedId": "6",
+      "speciesId": "1",
+      "year": 2021,
+      "countEstimate": 699,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Nisqually Chinook-2022",
+      "watershedId": "6",
+      "speciesId": "1",
+      "year": 2022,
+      "countEstimate": 1129,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Nisqually Chinook-2023",
+      "watershedId": "6",
+      "speciesId": "1",
+      "year": 2023,
+      "countEstimate": 1215,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skokomish Chinook-2010",
+      "watershedId": "7",
+      "speciesId": "1",
+      "year": 2010,
+      "countEstimate": 1214,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skokomish Winter Steelhead-2010",
+      "watershedId": "7",
+      "speciesId": "6",
+      "year": 2010,
+      "countEstimate": 319,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Upper Skokomish Late Fall Chum-2010",
+      "watershedId": "7",
+      "speciesId": "3",
+      "year": 2010,
+      "countEstimate": 1725,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skokomish Chinook-2011",
+      "watershedId": "7",
+      "speciesId": "1",
+      "year": 2011,
+      "countEstimate": 1321,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skokomish Winter Steelhead-2011",
+      "watershedId": "7",
+      "speciesId": "6",
+      "year": 2011,
+      "countEstimate": 424,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Upper Skokomish Late Fall Chum-2011",
+      "watershedId": "7",
+      "speciesId": "3",
+      "year": 2011,
+      "countEstimate": 9184,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skokomish Chinook-2012",
+      "watershedId": "7",
+      "speciesId": "1",
+      "year": 2012,
+      "countEstimate": 1533,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skokomish Winter Steelhead-2012",
+      "watershedId": "7",
+      "speciesId": "6",
+      "year": 2012,
+      "countEstimate": 499,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Upper Skokomish Late Fall Chum-2012",
+      "watershedId": "7",
+      "speciesId": "3",
+      "year": 2012,
+      "countEstimate": 7919,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skokomish Chinook-2013",
+      "watershedId": "7",
+      "speciesId": "1",
+      "year": 2013,
+      "countEstimate": 1722,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skokomish Winter Steelhead-2013",
+      "watershedId": "7",
+      "speciesId": "6",
+      "year": 2013,
+      "countEstimate": 1028,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Upper Skokomish Late Fall Chum-2013",
+      "watershedId": "7",
+      "speciesId": "3",
+      "year": 2013,
+      "countEstimate": 17968,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skokomish Chinook-2014",
+      "watershedId": "7",
+      "speciesId": "1",
+      "year": 2014,
+      "countEstimate": 849,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skokomish Winter Steelhead-2014",
+      "watershedId": "7",
+      "speciesId": "6",
+      "year": 2014,
+      "countEstimate": 614,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Upper Skokomish Late Fall Chum-2014",
+      "watershedId": "7",
+      "speciesId": "3",
+      "year": 2014,
+      "countEstimate": 9461,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Skokomish Chinook-2015",
+      "watershedId": "7",
+      "speciesId": "1",
+      "year": 2015,
+      "countEstimate": 432,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skokomish Winter Steelhead-2015",
+      "watershedId": "7",
+      "speciesId": "6",
+      "year": 2015,
+      "countEstimate": 1338,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Upper Skokomish Late Fall Chum-2015",
+      "watershedId": "7",
+      "speciesId": "3",
+      "year": 2015,
+      "countEstimate": 6164,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skokomish Chinook-2016",
+      "watershedId": "7",
+      "speciesId": "1",
+      "year": 2016,
+      "countEstimate": 1342,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skokomish Winter Steelhead-2016",
+      "watershedId": "7",
+      "speciesId": "6",
+      "year": 2016,
+      "countEstimate": 1126,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Upper Skokomish Late Fall Chum-2016",
+      "watershedId": "7",
+      "speciesId": "3",
+      "year": 2016,
+      "countEstimate": 7654,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skokomish Chinook-2017",
+      "watershedId": "7",
+      "speciesId": "1",
+      "year": 2017,
+      "countEstimate": 3545,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skokomish Winter Steelhead-2017",
+      "watershedId": "7",
+      "speciesId": "6",
+      "year": 2017,
+      "countEstimate": 619,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Upper Skokomish Late Fall Chum-2017",
+      "watershedId": "7",
+      "speciesId": "3",
+      "year": 2017,
+      "countEstimate": 4227,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skokomish Chinook-2018",
+      "watershedId": "7",
+      "speciesId": "1",
+      "year": 2018,
+      "countEstimate": 1248,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skokomish Winter Steelhead-2018",
+      "watershedId": "7",
+      "speciesId": "6",
+      "year": 2018,
+      "countEstimate": 903,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Upper Skokomish Late Fall Chum-2018",
+      "watershedId": "7",
+      "speciesId": "3",
+      "year": 2018,
+      "countEstimate": 2788,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skokomish Chinook-2019",
+      "watershedId": "7",
+      "speciesId": "1",
+      "year": 2019,
+      "countEstimate": 1535,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skokomish Winter Steelhead-2019",
+      "watershedId": "7",
+      "speciesId": "6",
+      "year": 2019,
+      "countEstimate": 867,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Upper Skokomish Late Fall Chum-2019",
+      "watershedId": "7",
+      "speciesId": "3",
+      "year": 2019,
+      "countEstimate": 528,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Skokomish Chinook-2020",
+      "watershedId": "7",
+      "speciesId": "1",
+      "year": 2020,
+      "countEstimate": 1255,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skokomish Winter Steelhead-2020",
+      "watershedId": "7",
+      "speciesId": "6",
+      "year": 2020,
+      "countEstimate": 526,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Upper Skokomish Late Fall Chum-2020",
+      "watershedId": "7",
+      "speciesId": "3",
+      "year": 2020,
+      "countEstimate": 2849,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skokomish Chinook-2021",
+      "watershedId": "7",
+      "speciesId": "1",
+      "year": 2021,
+      "countEstimate": 993,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skokomish Winter Steelhead-2021",
+      "watershedId": "7",
+      "speciesId": "6",
+      "year": 2021,
+      "countEstimate": 499,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Upper Skokomish Late Fall Chum-2021",
+      "watershedId": "7",
+      "speciesId": "3",
+      "year": 2021,
+      "countEstimate": 12934,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skokomish Chinook-2022",
+      "watershedId": "7",
+      "speciesId": "1",
+      "year": 2022,
+      "countEstimate": 5395,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skokomish Winter Steelhead-2022",
+      "watershedId": "7",
+      "speciesId": "6",
+      "year": 2022,
+      "countEstimate": 340,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Upper Skokomish Late Fall Chum-2022",
+      "watershedId": "7",
+      "speciesId": "3",
+      "year": 2022,
+      "countEstimate": 6485,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skokomish Chinook-2023",
+      "watershedId": "7",
+      "speciesId": "1",
+      "year": 2023,
+      "countEstimate": 4776,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skokomish Winter Steelhead-2023",
+      "watershedId": "7",
+      "speciesId": "6",
+      "year": 2023,
+      "countEstimate": 363,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Upper Skokomish Late Fall Chum-2023",
+      "watershedId": "7",
+      "speciesId": "3",
+      "year": 2023,
+      "countEstimate": 6460,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skokomish Chinook-2024",
+      "watershedId": "7",
+      "speciesId": "1",
+      "year": 2024,
+      "countEstimate": 3313,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skokomish Winter Steelhead-2024",
+      "watershedId": "7",
+      "speciesId": "6",
+      "year": 2024,
+      "countEstimate": 335,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Upper Skokomish Late Fall Chum-2024",
+      "watershedId": "7",
+      "speciesId": "3",
+      "year": 2024,
+      "countEstimate": 17057,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skokomish Chinook-2025",
+      "watershedId": "7",
+      "speciesId": "1",
+      "year": 2025,
+      "countEstimate": 176,
+      "method": "NOSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Skokomish Winter Steelhead-2025",
+      "watershedId": "7",
+      "speciesId": "6",
+      "year": 2025,
+      "countEstimate": 238,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "North Fork Stillaguamish Chinook-2010",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2010,
+      "countEstimate": 816,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "South Fork Stillaguamish Chinook-2010",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2010,
+      "countEstimate": 21,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Stillaguamish Coho-2010",
+      "watershedId": "8",
+      "speciesId": "2",
+      "year": 2010,
+      "countEstimate": 15172,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "North Fork Stillaguamish Chinook-2011",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2011,
+      "countEstimate": 1471,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "South Fork Stillaguamish Chinook-2011",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2011,
+      "countEstimate": 166,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Stillaguamish Coho-2011",
+      "watershedId": "8",
+      "speciesId": "2",
+      "year": 2011,
+      "countEstimate": 49991,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "North Fork Stillaguamish Chinook-2012",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2012,
+      "countEstimate": 1567,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "South Fork Stillaguamish Chinook-2012",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2012,
+      "countEstimate": 220,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Stillaguamish Coho-2012",
+      "watershedId": "8",
+      "speciesId": "2",
+      "year": 2012,
+      "countEstimate": 45156,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "North Fork Stillaguamish Chinook-2013",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2013,
+      "countEstimate": 902,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "South Fork Stillaguamish Chinook-2013",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2013,
+      "countEstimate": 95,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Stillaguamish Coho-2013",
+      "watershedId": "8",
+      "speciesId": "2",
+      "year": 2013,
+      "countEstimate": 60387,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Stillaguamish Pink-2013",
+      "watershedId": "8",
+      "speciesId": "4",
+      "year": 2013,
+      "countEstimate": 246481,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "North Fork Stillaguamish Chinook-2014",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2014,
+      "countEstimate": 404,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "South Fork Stillaguamish Chinook-2014",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2014,
+      "countEstimate": 15,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Stillaguamish Coho-2014",
+      "watershedId": "8",
+      "speciesId": "2",
+      "year": 2014,
+      "countEstimate": 35763,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "North Fork Stillaguamish Chinook-2015",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2015,
+      "countEstimate": 572,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "South Fork Stillaguamish Chinook-2015",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2015,
+      "countEstimate": 137,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Stillaguamish Coho-2015",
+      "watershedId": "8",
+      "speciesId": "2",
+      "year": 2015,
+      "countEstimate": 2909,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Stillaguamish Pink-2015",
+      "watershedId": "8",
+      "speciesId": "4",
+      "year": 2015,
+      "countEstimate": 91228,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "North Fork Stillaguamish Chinook-2016",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2016,
+      "countEstimate": 909,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "South Fork Stillaguamish Chinook-2016",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2016,
+      "countEstimate": 144,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Stillaguamish Coho-2016",
+      "watershedId": "8",
+      "speciesId": "2",
+      "year": 2016,
+      "countEstimate": 12933,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "North Fork Stillaguamish Chinook-2017",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2017,
+      "countEstimate": 959,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "South Fork Stillaguamish Chinook-2017",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2017,
+      "countEstimate": 111,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Stillaguamish Coho-2017",
+      "watershedId": "8",
+      "speciesId": "2",
+      "year": 2017,
+      "countEstimate": 6017,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Stillaguamish Pink-2017",
+      "watershedId": "8",
+      "speciesId": "4",
+      "year": 2017,
+      "countEstimate": 21462,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "North Fork Stillaguamish Chinook-2018",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2018,
+      "countEstimate": 909,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "South Fork Stillaguamish Chinook-2018",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2018,
+      "countEstimate": 57,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Stillaguamish Coho-2018",
+      "watershedId": "8",
+      "speciesId": "2",
+      "year": 2018,
+      "countEstimate": 23937,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "North Fork Stillaguamish Chinook-2019",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2019,
+      "countEstimate": 847,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "South Fork Stillaguamish Chinook-2019",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2019,
+      "countEstimate": 97,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Stillaguamish Coho-2019",
+      "watershedId": "8",
+      "speciesId": "2",
+      "year": 2019,
+      "countEstimate": 12887,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "North Fork Stillaguamish Chinook-2020",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2020,
+      "countEstimate": 1318,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "South Fork Stillaguamish Chinook-2020",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2020,
+      "countEstimate": 74,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Stillaguamish Coho-2020",
+      "watershedId": "8",
+      "speciesId": "2",
+      "year": 2020,
+      "countEstimate": 21555,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "North Fork Stillaguamish Chinook-2021",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2021,
+      "countEstimate": 1423,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "South Fork Stillaguamish Chinook-2021",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2021,
+      "countEstimate": 156,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Stillaguamish Coho-2021",
+      "watershedId": "8",
+      "speciesId": "2",
+      "year": 2021,
+      "countEstimate": 38176,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Stillaguamish Pink-2021",
+      "watershedId": "8",
+      "speciesId": "4",
+      "year": 2021,
+      "countEstimate": 234476,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "North Fork Stillaguamish Chinook-2022",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2022,
+      "countEstimate": 1260,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "South Fork Stillaguamish Chinook-2022",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2022,
+      "countEstimate": 270,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Stillaguamish Coho-2022",
+      "watershedId": "8",
+      "speciesId": "2",
+      "year": 2022,
+      "countEstimate": 53828,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "North Fork Stillaguamish Chinook-2023",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2023,
+      "countEstimate": 654,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "South Fork Stillaguamish Chinook-2023",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2023,
+      "countEstimate": 105,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Stillaguamish Coho-2023",
+      "watershedId": "8",
+      "speciesId": "2",
+      "year": 2023,
+      "countEstimate": 37963,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Stillaguamish Pink-2023",
+      "watershedId": "8",
+      "speciesId": "4",
+      "year": 2023,
+      "countEstimate": 298436,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "North Fork Stillaguamish Chinook-2024",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2024,
+      "countEstimate": 865,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "South Fork Stillaguamish Chinook-2024",
+      "watershedId": "8",
+      "speciesId": "1",
+      "year": 2024,
+      "countEstimate": 274,
+      "method": "TSAEJ",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Stillaguamish Coho-2024",
+      "watershedId": "8",
+      "speciesId": "2",
+      "year": 2024,
+      "countEstimate": 38343,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "high"
+    },
+    {
+      "id": "Nooksack Coho-2010",
+      "watershedId": "9",
+      "speciesId": "2",
+      "year": 2010,
+      "countEstimate": 2229,
+      "method": "Unknown Methodology",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nooksack Fall Chum-2010",
+      "watershedId": "9",
+      "speciesId": "3",
+      "year": 2010,
+      "countEstimate": 21786,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "North Fork Nooksack Chinook (including Middle Fork Nooksack River)-2010",
+      "watershedId": "9",
+      "speciesId": "1",
+      "year": 2010,
+      "countEstimate": 1844,
+      "method": "Hatchery-Origin Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "South Fork Nooksack Chinook-2010",
+      "watershedId": "9",
+      "speciesId": "1",
+      "year": 2010,
+      "countEstimate": 122,
+      "method": "Hatch-Origin Spawners (Prop.)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nooksack Coho-2011",
+      "watershedId": "9",
+      "speciesId": "2",
+      "year": 2011,
+      "countEstimate": 786,
+      "method": "Unknown Methodology",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nooksack Fall Chum-2011",
+      "watershedId": "9",
+      "speciesId": "3",
+      "year": 2011,
+      "countEstimate": 94457,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nooksack Pink-2011",
+      "watershedId": "9",
+      "speciesId": "4",
+      "year": 2011,
+      "countEstimate": 53850,
+      "method": "Total Natural Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "North Fork Nooksack Chinook (including Middle Fork Nooksack River)-2011",
+      "watershedId": "9",
+      "speciesId": "1",
+      "year": 2011,
+      "countEstimate": 766,
+      "method": "Hatchery-Origin Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "South Fork Nooksack Chinook-2011",
+      "watershedId": "9",
+      "speciesId": "1",
+      "year": 2011,
+      "countEstimate": 96,
+      "method": "Hatch-Origin Spawners (Prop.)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nooksack Coho-2012",
+      "watershedId": "9",
+      "speciesId": "2",
+      "year": 2012,
+      "countEstimate": 1327,
+      "method": "Unknown Methodology",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nooksack Fall Chum-2012",
+      "watershedId": "9",
+      "speciesId": "3",
+      "year": 2012,
+      "countEstimate": 16563,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "North Fork Nooksack Chinook (including Middle Fork Nooksack River)-2012",
+      "watershedId": "9",
+      "speciesId": "1",
+      "year": 2012,
+      "countEstimate": 477,
+      "method": "Hatchery-Origin Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "South Fork Nooksack Chinook-2012",
+      "watershedId": "9",
+      "speciesId": "1",
+      "year": 2012,
+      "countEstimate": 93,
+      "method": "Hatch-Origin Spawners (Prop.)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nooksack Fall Chum-2013",
+      "watershedId": "9",
+      "speciesId": "3",
+      "year": 2013,
+      "countEstimate": 34332,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "North Fork Nooksack Chinook (including Middle Fork Nooksack River)-2013",
+      "watershedId": "9",
+      "speciesId": "1",
+      "year": 2013,
+      "countEstimate": 1247,
+      "method": "Hatchery-Origin Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "South Fork Nooksack Chinook-2013",
+      "watershedId": "9",
+      "speciesId": "1",
+      "year": 2013,
+      "countEstimate": 162,
+      "method": "Hatch-Origin Spawners (Prop.)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nooksack Fall Chum-2014",
+      "watershedId": "9",
+      "speciesId": "3",
+      "year": 2014,
+      "countEstimate": 42859,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "North Fork Nooksack Chinook (including Middle Fork Nooksack River)-2014",
+      "watershedId": "9",
+      "speciesId": "1",
+      "year": 2014,
+      "countEstimate": 1307,
+      "method": "Hatchery-Origin Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "South Fork Nooksack Chinook-2014",
+      "watershedId": "9",
+      "speciesId": "1",
+      "year": 2014,
+      "countEstimate": 11,
+      "method": "Hatch-Origin Spawners (Prop.)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "low"
+    },
+    {
+      "id": "Nooksack Fall Chum-2015",
+      "watershedId": "9",
+      "speciesId": "3",
+      "year": 2015,
+      "countEstimate": 48794,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "North Fork Nooksack Chinook (including Middle Fork Nooksack River)-2015",
+      "watershedId": "9",
+      "speciesId": "1",
+      "year": 2015,
+      "countEstimate": 1316,
+      "method": "Hatchery-Origin Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "South Fork Nooksack Chinook-2015",
+      "watershedId": "9",
+      "speciesId": "1",
+      "year": 2015,
+      "countEstimate": 9,
+      "method": "Hatch-Origin Spawners (Prop.)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nooksack Fall Chum-2016",
+      "watershedId": "9",
+      "speciesId": "3",
+      "year": 2016,
+      "countEstimate": 41841,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "North Fork Nooksack Chinook (including Middle Fork Nooksack River)-2016",
+      "watershedId": "9",
+      "speciesId": "1",
+      "year": 2016,
+      "countEstimate": 735,
+      "method": "Hatchery-Origin Spawners",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "South Fork Nooksack Chinook-2016",
+      "watershedId": "9",
+      "speciesId": "1",
+      "year": 2016,
+      "countEstimate": 87,
+      "method": "Hatch-Origin Spawners (Prop.)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nooksack Fall Chum-2017",
+      "watershedId": "9",
+      "speciesId": "3",
+      "year": 2017,
+      "countEstimate": 22108,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nooksack Fall Chum-2018",
+      "watershedId": "9",
+      "speciesId": "3",
+      "year": 2018,
+      "countEstimate": 14119,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    },
+    {
+      "id": "Nooksack Fall Chum-2019",
+      "watershedId": "9",
+      "speciesId": "3",
+      "year": 2019,
+      "countEstimate": 12582,
+      "method": "Spawners (Proportion)",
+      "source": "WDFW SPI (data.wa.gov/resource/fgyz-n3uk)",
+      "confidence": "medium"
+    }
+  ]
+}

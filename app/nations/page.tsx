@@ -1,6 +1,13 @@
+import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { TribalPartnerCard } from '@/components/nations/TribalPartnerCard';
 import { getTribes } from '@/lib/data/tribes';
+
+export const metadata: Metadata = {
+  title: 'The Nations of Puget Sound | Puget Sound Salmon Health',
+  description:
+    'Salmon recovery is guided by the knowledge and leadership of the tribes who have cared for these waters since time immemorial.',
+};
 
 export default async function NationsPage() {
   const tribes = await getTribes();
@@ -43,7 +50,13 @@ export default async function NationsPage() {
           <h2 className="text-2xl font-bold mb-6 text-primary">Partner Nations</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {tribes.map((tribe) => (
-              <TribalPartnerCard key={tribe.id} tribe={tribe} />
+              <TribalPartnerCard
+                key={tribe.id}
+                tribe={{
+                  ...tribe,
+                  hasContent: !!(tribe.content?.salmonRelationship),
+                }}
+              />
             ))}
           </div>
         </div>

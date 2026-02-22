@@ -1,10 +1,25 @@
+import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Salmon Life Cycle | Learn | Puget Sound Salmon Health',
+  description:
+    "Follow a salmon's incredible journey from a tiny egg in a stream to the vast ocean and back home to spawn.",
+};
 
 export default function SalmonLifeCyclePage() {
   return (
     <div className="min-h-screen py-8 px-4">
       <div className="max-w-4xl mx-auto">
+
+        {/* Breadcrumb */}
+        <nav className="mb-6 text-sm flex items-center gap-2" aria-label="Breadcrumb">
+          <Link href="/learn" className="text-primary hover:underline">Learn</Link>
+          <span className="text-gray-400">›</span>
+          <span className="text-gray-700">Salmon Life Cycle</span>
+        </nav>
+
         {/* Module Header */}
         <div className="mb-8">
           <div className="flex items-center gap-4 mb-4">
@@ -222,11 +237,11 @@ export default function SalmonLifeCyclePage() {
               </p>
             </div>
             <div>
-              <Link href="/learn/why-salmon-matter" className="underline hover:text-gray-200">
-                🌊 Why Salmon Matter
+              <Link href="/learn/treaty-rights" className="underline hover:text-gray-200">
+                Treaty Rights &amp; Co-Management →
               </Link>
               <p className="text-sm mt-1">
-                Learn about salmon&apos;s ecological, cultural, and economic importance
+                Learn how tribal treaty rights and co-management protect salmon today
               </p>
             </div>
             <div>

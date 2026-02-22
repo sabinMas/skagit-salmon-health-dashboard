@@ -18,10 +18,9 @@ export async function GET() {
   try {
     const params = new URLSearchParams({
       format: "json",
-      stateCd: "WA",
       parameterCd: "00010", // water temperature °C
       siteStatus: "active",
-      bBox: "-123.2,46.8,-121.5,48.5",
+      bBox: "-123.2,46.8,-121.5,48.5", // Puget Sound; stateCd not allowed alongside bBox
     });
 
     const res = await fetch(
