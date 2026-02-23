@@ -8,6 +8,8 @@ const sourceSans = Source_Sans_3({
   subsets: ["latin"],
   weight: ["400", "600"],
   variable: "--font-sans-loaded",
+  display: "swap",
+  adjustFontFallback: true,
 });
 
 const SITE_NAME = "Puget Sound Salmon Health";

@@ -1,21 +1,17 @@
-// Replaces GET /api/wdfw in app.js
-// Proxies WDFW SPI Socrata API; response cached 15 min via ISR
+// GET /api/wdfw — Serves pre-seeded WDFW salmon return data.
+//
+// The raw Socrata endpoint (data.wa.gov) returns 11–20 MB and cannot be
+// cached by Next.js ISR. Instead, this route serves the pre-processed JSON
+// produced by `npm run data:refresh` (scripts/fetch-wdfw.mjs), which is
+// 107 KB and fully cacheable.
+//
+// To refresh the data: npm run data:refresh  (re-fetches from Socrata → writes lib/data/real/salmon-returns.json)
 
-export const revalidate = 900;
+import returnsFile from '@/lib/data/real/salmon-returns.json';
+
+// Static — rebuild triggers a fresh read; no ISR needed since data is refreshed manually.
+export const dynamic = 'force-static';
 
 export async function GET() {
-  try {
-    const res = await fetch(
-      "https://data.wa.gov/api/views/x25s-cxg8/rows.json?$limit=50000",
-      { next: { revalidate: 900 } }
-    );
-    if (!res.ok)
-      throw new Error(`WDFW API error: ${res.status} ${res.statusText}`);
-
-    const data = await res.json();
-    return Response.json(data);
-  } catch (err) {
-    console.error("[/api/wdfw]", err);
-    return Response.json({ error: String(err) }, { status: 502 });
-  }
+  return Response.json(returnsFile);
 }

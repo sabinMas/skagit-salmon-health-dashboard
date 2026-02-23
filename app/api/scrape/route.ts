@@ -1,15 +1,22 @@
 // Replaces GET /api/scrape in app.js
-// Aggregates salmon data from multiple public sources in parallel
+// Aggregates salmon data from multiple public sources in parallel.
+// Uses Socrata resource endpoints (/resource/) which support SoQL filtering,
+// keeping all responses well under the 2 MB Next.js ISR cache ceiling.
 
 export const revalidate = 900;
 
+// Escapement/SPI data — filtered to recent PS rows (docs/wdfw-schema.md strategy)
+const ESCAPEMENT_PARAMS = new URLSearchParams({
+  $where:  "year >= 2010 AND abundance_quantity IS NOT NULL AND data_type IN ('TSAEJ','Spawner Fish','NOSAEJ','Escapement Fish')",
+  $select: "population_name,species,year,abundance_quantity,data_type,production_type,last_updated",
+  $limit:  "5000",
+  $order:  "year DESC",
+});
+
 const WDFW_ENDPOINTS: Record<string, string> = {
-  escapement:
-    "https://data.wa.gov/api/views/fgyz-n3uk/rows.json?$limit=50000",
-  populations:
-    "https://data.wa.gov/api/views/ncqh-ypvf/rows.json?$limit=50000",
-  recoveryGoals:
-    "https://data.wa.gov/api/views/d8mu-pcf6/rows.json?$limit=50000",
+  escapement:   `https://data.wa.gov/resource/fgyz-n3uk.json?${ESCAPEMENT_PARAMS}`,
+  populations:  "https://data.wa.gov/resource/ncqh-ypvf.json?$limit=2000",
+  recoveryGoals:"https://data.wa.gov/resource/d8mu-pcf6.json?$limit=2000",
 };
 
 async function safeFetch(url: string): Promise<{ ok: boolean; data?: unknown; error?: string }> {
@@ -59,7 +66,7 @@ export async function GET() {
 
   // Puget Sound Partnership Vital Signs (WA open data)
   const psp = await safeFetch(
-    "https://data.wa.gov/api/views/rqgb-pnqn/rows.json?$limit=1000"
+    "https://data.wa.gov/resource/rqgb-pnqn.json?$limit=1000"
   );
   if (psp.ok) {
     results.pugetsoundPartnership = psp.data;

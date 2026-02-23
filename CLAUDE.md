@@ -117,6 +117,19 @@ Before stopping:
 - M1 milestone marked **COMPLETE** in TASKS.md
 - `npm run lint` ✅ `npm run build` ✅ all 15 routes
 
+### 2026-02-22 (session 10)
+- M7.2 — Performance optimization:
+  - **API cache failures fixed** (was: "items over 2MB can not be cached" on every build)
+    - `/api/wdfw`: rewrote to serve pre-seeded `lib/data/real/salmon-returns.json` directly (107KB, always cacheable) — root cause was dual Socrata requests to fgyz-n3uk causing rate-limit 400s at build time
+    - `/api/scrape`: switched from `rows.json` (ignores SoQL) to `/resource/` endpoint with `$where year>=2010 AND abundance_quantity IS NOT NULL AND data_type IN (...)` + `$limit=5000` → well under 2MB
+  - **GeoJSON cache headers**: added `Cache-Control: public, max-age=31536000, immutable` for `/data/puget-sound-watersheds.geojson` in next.config.ts
+  - **Compression**: `compress: true` in next.config.ts (gzip all responses)
+  - **Security**: `poweredByHeader: false` removes `X-Powered-By: Next.js` header
+  - **Leaflet CSS scoped to dashboard**: removed `@import "leaflet/dist/leaflet.css"` from globals.css; moved to `app/dashboard/layout.tsx` — saves ~30KB CSS on every non-dashboard page
+  - **Font loading**: added `display: "swap"` + `adjustFontFallback: true` to Source Sans 3 — reduces CLS during font load
+  - Build: **zero cache warnings** — all 15 routes `○ Static` or `ƒ Dynamic` as expected
+  - Key lesson: Socrata `/resource/{id}.json` supports SoQL; `/api/views/{id}/rows.json` does not; numeric column comparisons must not quote the value (`year >= 2010` not `year >= '2010'`)
+
 ### 2026-02-22 (session 9)
 - M7.1 — Full accessibility audit + fixes (WCAG 2.1 AA):
   - app/page.tsx: decorative emoji → `aria-hidden="true"`; H3→H2 for "The Data"/"The Projects"; H4→H3 for "How to Use" items (fixed H1→H3 skip)
