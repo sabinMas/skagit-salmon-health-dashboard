@@ -94,16 +94,17 @@ Stewardship projects page (`/stewardship`) covers restoration initiatives instea
 
 ---
 
-## M6: CMS & Partner Editing Workflow 🗓️ NEEDS REPLAN
+## M6: CMS for Stewardship Projects 🚧 PARTIALLY COMPLETE
 
-> Original scope (tribal partner CMS) is obsolete — nations pages removed.
-> New direction TBD: possibly a lightweight admin interface for stewardship project content.
+> Original scope (tribal partner CMS with content governance) is obsolete.
+> New scope: lightweight way to add/edit stewardship project content without code changes.
+> Projects list partner organizations (tribal nations, NGOs, agencies) as plain text strings.
 
-- [ ] M6.1 — Define new scope (what content needs editing without code?)
-- [ ] M6.2 — Evaluate and select headless CMS or admin approach
-- [ ] M6.3 — Implement chosen solution
-- [ ] M6.4 — Update Next.js to fetch from CMS
-- [ ] M6.5 — Create content editor guide
+- [ ] M6.1 — Decide on CMS approach (current: `lib/data/projects.ts`; upgrade if non-dev editors needed)
+- [x] M6.2 — Refactored `Project` type: `tribeIds` → `partnerOrgs: string[]`; added `yearStarted: number`
+- [x] M6.3 — Added 9 real, publicly documented Puget Sound stewardship projects
+- [x] M6.4 — Updated all stewardship pages + `ProjectList` to render `partnerOrgs` (no governance banner)
+- [ ] M6.5 — Write a short guide for adding new projects
 
 ---
 
@@ -163,7 +164,7 @@ Stewardship projects page (`/stewardship`) covers restoration initiatives instea
 
 1. **M7.6 — Deployment** (Vercel or similar; `npm run build` is clean and ready)
 2. **M7.7 — Documentation** (README update, data refresh instructions)
-3. **M6 replan** — decide what CMS/admin scope makes sense now that Nations are removed
+3. **M6** — Add real stewardship project content; decide on CMS approach
 
 ### Blockers
 

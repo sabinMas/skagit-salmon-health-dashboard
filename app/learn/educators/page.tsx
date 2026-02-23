@@ -25,6 +25,19 @@ const MODULES = [
     standards: 'NGSS MS-LS1-4, MS-LS2-4',
   },
   {
+    slug: 'why-salmon-matter',
+    title: 'Why Salmon Matter',
+    grades: 'Grades 7–12',
+    time: '20 min',
+    subjects: ['Environmental Science', 'Social Studies', 'Economics'],
+    objectives: [
+      'Explain what a keystone species is and why salmon fit that definition',
+      'Describe the nutrient cycle that connects salmon to Pacific Northwest forests',
+      'Summarize the ecological, economic, and cultural significance of salmon to Puget Sound',
+    ],
+    standards: 'NGSS MS-LS2-2, MS-LS2-4, HS-LS2-6. WA EALRs 4.2',
+  },
+  {
     slug: 'treaty-rights',
     title: 'Treaty Rights & Co-Management',
     grades: 'Grades 9–12 / Adult',
@@ -36,6 +49,19 @@ const MODULES = [
       'Describe how co-management works in practice and why it matters for salmon',
     ],
     standards: 'CCSS RH.9-10.6, C3 D2.His.5.9-12, WA EALRs 4.1 & 4.3',
+  },
+  {
+    slug: 'reading-the-dashboard',
+    title: 'Reading the Dashboard',
+    grades: 'All ages',
+    time: '10 min',
+    subjects: ['Data Literacy', 'Environmental Science', 'Math'],
+    objectives: [
+      'Identify the data sources behind the Salmon Health Dashboard',
+      'Interpret salmon population trend charts and status color indicators correctly',
+      'Explain at least two important limitations of the data presented',
+    ],
+    standards: 'NGSS Science & Engineering Practices (analyzing data). CCSS Math MP.3. WA Data Literacy Standards.',
   },
 ];
 
@@ -242,12 +268,12 @@ export default function EducatorsPage() {
             Are you a teacher or curriculum specialist who would like to pilot these materials?
             We&apos;d love to work with you — please reach out to discuss.
           </p>
-          <a
-            href="mailto:education@pugetsalmonhealth.org"
+          <Link
+            href="/about#contact"
             className="inline-block bg-white text-primary px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-gray-100 transition-colors"
           >
-            Contact the Education Team
-          </a>
+            Get in Touch →
+          </Link>
         </div>
 
       </div>

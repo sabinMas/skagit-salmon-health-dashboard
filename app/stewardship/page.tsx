@@ -15,17 +15,8 @@ export const metadata: Metadata = {
   },
 };
 
-function slugToName(slug: string): string {
-  return slug.split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
-}
-
 export default async function StewardshipPage() {
-  const rawProjects = getProjects();
-
-  const projects = rawProjects.map((project) => ({
-    ...project,
-    tribeNames: project.tribeIds.map(slugToName),
-  }));
+  const projects = getProjects();
 
   return (
     <div className="min-h-screen py-8 px-4">

@@ -89,10 +89,11 @@ export interface Project {
   id: string;
   title: string;
   slug: string;
-  tribeIds: string[];
+  partnerOrgs: string[];
   watershedId: string;
   type: ProjectType;
   status: "active" | "completed";
+  yearStarted: number;
   excerpt: string;
 }
 

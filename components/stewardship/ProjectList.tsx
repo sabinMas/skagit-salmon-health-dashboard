@@ -50,9 +50,7 @@ const TYPE_COLORS: Record<ProjectType, { pill: string; filter: string; filterAct
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
-interface ProjectWithMeta extends Project {
-  tribeNames: string[];
-}
+type ProjectWithMeta = Project;
 
 interface ProjectListProps {
   projects: ProjectWithMeta[];
@@ -123,9 +121,11 @@ export function ProjectList({ projects }: ProjectListProps) {
                 {project.title}
               </h3>
 
-              <p className="text-sm text-gray-600 mb-2">
-                <strong>Led by:</strong> {project.tribeNames.join(', ')}
-              </p>
+              {project.partnerOrgs.length > 0 && (
+                <p className="text-sm text-gray-600 mb-2">
+                  <strong>Partners:</strong> {project.partnerOrgs.join(', ')}
+                </p>
+              )}
 
               <p className="text-sm text-gray-700 leading-relaxed flex-1">
                 {project.excerpt}

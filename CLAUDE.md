@@ -117,6 +117,13 @@ Before stopping:
 - M1 milestone marked **COMPLETE** in TASKS.md
 - `npm run lint` ✅ `npm run build` ✅ all 15 routes
 
+### 2026-02-23 (session 11)
+- **PLANNING.md rewrite** — Removed all Nations/tribal-partnership framing; updated vision, sitemap, user journeys, data model, and component library to reflect the real site: data dashboard + stewardship projects. Projects may list real partner orgs as plain text.
+- **M6 (partial)** — Refactored `Project` type: `tribeIds: string[]` → `partnerOrgs: string[]`; added `yearStarted: number`; dropped `tribeId` filter from `getProjects()`; added `getProjectBySlug()` helper
+- Replaced 5 fabricated tribe-specific mock projects with **9 real, publicly documented** Puget Sound stewardship projects covering all 9 watersheds: Nisqually delta (USFWS/Nisqually Land Trust/Nisqually Indian Tribe), Skagit System Cooperative monitoring, Cedar River sockeye hatchery (Seattle/Muckleshoot), WSDOT culvert replacement (Boldt Decision), Stillaguamish Chinook recovery, Duwamish Alive coalition, Nooksack Salmon Enhancement Association, Skokomish River channel/estuary restoration, WRIA 7 Snohomish recovery plan
+- Updated all consumers: `ProjectList.tsx` renders `partnerOrgs`, `stewardship/page.tsx` removed `slugToName` transform, `stewardship/[project]/page.tsx` uses `project.partnerOrgs` + `project.yearStarted`
+- `npm run build` ✅ 15 routes clean
+
 ### 2026-02-22 (session 10)
 - M7.2 — Performance optimization:
   - **API cache failures fixed** (was: "items over 2MB can not be cached" on every build)

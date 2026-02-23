@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { ContactForm } from '@/components/ui/ContactForm';
 
 export const metadata: Metadata = {
   title: 'About',
@@ -29,13 +30,14 @@ export default function AboutPage() {
             <p>
               The Puget Sound Salmon Health Dashboard was created to make salmon population and
               watershed health data accessible to everyone — from curious neighbors to educators,
-              scientists, and tribal program managers.
+              scientists, and resource managers.
             </p>
             <p>
-              Salmon recovery in Puget Sound is shaped by both scientific monitoring data and
-              the traditional ecological knowledge of the Native Nations who have stewarded these
-              waters for thousands of years. This dashboard draws on the public data record and
-              aims to present it in context.
+              Salmon recovery in Puget Sound is shaped by scientific monitoring data, the stewardship
+              of the Native Nations who have managed these fisheries for thousands of years, and the
+              coordinated work of government agencies, conservation organizations, and communities.
+              This dashboard draws on the public data record and aims to present it clearly and in
+              context.
             </p>
             <p>
               <strong>Our goals:</strong>
@@ -71,31 +73,31 @@ export default function AboutPage() {
                 <tr>
                   <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">Salmon Returns</td>
                   <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">
-                    WDFW Salmonid Population Indicators (SPI) Database
+                    WDFW Salmonid Population Indicators (SPI) — data.wa.gov
                   </td>
-                  <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">Annual</td>
+                  <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">Annual (refresh with <code className="text-xs bg-gray-100 px-1 rounded">npm run data:refresh</code>)</td>
                 </tr>
                 <tr>
                   <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">Water Temperature</td>
                   <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">
                     USGS National Water Information System
                   </td>
-                  <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">Real-time (15 min)</td>
+                  <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">Real-time (15 min cache)</td>
                 </tr>
                 <tr>
                   <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">Streamflow</td>
                   <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">USGS NWIS</td>
-                  <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">Real-time (15 min)</td>
+                  <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">Real-time (15 min cache)</td>
                 </tr>
                 <tr>
                   <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">Fish Passage Barriers</td>
                   <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">WSDOT Fish Passage API</td>
-                  <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">Quarterly</td>
+                  <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">Quarterly (15 min cache)</td>
                 </tr>
                 <tr>
                   <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">Watershed Boundaries</td>
                   <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">USGS Watershed Boundary Dataset</td>
-                  <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">Static</td>
+                  <td className="px-3 py-3 sm:px-6 sm:py-4 text-sm text-gray-700">Static (1-year cache)</td>
                 </tr>
               </tbody>
             </table>
@@ -145,45 +147,30 @@ export default function AboutPage() {
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>Keyboard navigation for all interactive elements</li>
-              <li>Screen reader-friendly chart descriptions and data summaries</li>
+              <li>Screen reader-friendly chart descriptions and accessible data tables behind every chart</li>
               <li>Color contrast ratios meeting AA standards</li>
               <li>Status indicators that don&apos;t rely solely on color (paired with text/icons)</li>
               <li>Skip-to-content links on every page</li>
             </ul>
             <p>
-              <strong>Report an issue:</strong> If you encounter accessibility barriers, please
-              contact us at{' '}
-              <a href="mailto:accessibility@pugetsalmonhealth.org" className="text-primary underline">
-                accessibility@pugetsalmonhealth.org
-              </a>
+              <strong>Report an accessibility issue:</strong> Use the contact form below and mention
+              &quot;accessibility&quot; in your subject line.
             </p>
           </div>
         </section>
 
         {/* Contact */}
-        <section className="bg-gradient-to-r from-primary to-accent text-white rounded-lg p-8">
-          <h2 className="text-2xl font-bold mb-4">Contact & Get Involved</h2>
-          <div className="space-y-4">
-            <p>
-              <strong>For data questions:</strong>{' '}
-              <a
-                href="mailto:data@pugetsalmonhealth.org"
-                className="underline hover:text-gray-200"
-              >
-                data@pugetsalmonhealth.org
-              </a>
-            </p>
-            <p>
-              <strong>For general inquiries:</strong>{' '}
-              <a
-                href="mailto:info@pugetsalmonhealth.org"
-                className="underline hover:text-gray-200"
-              >
-                info@pugetsalmonhealth.org
-              </a>
-            </p>
+        <section id="contact">
+          <h2 className="text-2xl font-bold text-primary mb-2">Contact & Get Involved</h2>
+          <p className="text-gray-600 text-sm mb-6">
+            Questions about the data, feedback on the site, or ideas for new features? We&apos;d love
+            to hear from you.
+          </p>
+          <div className="bg-white border border-gray-200 rounded-lg p-6 sm:p-8">
+            <ContactForm />
           </div>
         </section>
+
       </div>
     </div>
   );

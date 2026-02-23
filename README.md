@@ -1,83 +1,115 @@
 # Puget Sound Salmon Health Dashboard
 
-> An interactive web platform tracking salmon population health across Puget Sound watersheds, built in partnership with tribal nations and informed by both scientific data and traditional ecological knowledge.
+> An interactive public dashboard tracking salmon population health across Puget Sound watersheds — powered by real data from WDFW, USGS, and WSDOT.
 
-## 🌊 Project Vision
+**Live site:** https://puget-salmon-health.vercel.app
 
-This dashboard answers two interconnected questions:
+---
 
-1. **"How are the salmon doing?"** — through clear, visual, data-backed indicators
-2. **"Why does it matter, and who has always known?"** — by centering tribal knowledge and leadership
+## What It Does
 
-**Design Philosophy:** Data and Indigenous knowledge are presented as equal pillars, not hierarchical. Tribal nations control their own content. The site is accessible, educational, and built to grow.
+The dashboard answers two questions:
 
-## 🛠️ Tech Stack
+1. **"How are the salmon doing?"** — visual, data-backed indicators across 9 Puget Sound watersheds
+2. **"What's being done about it?"** — a curated index of real habitat restoration, monitoring, and stewardship projects
 
-- **Framework:** Next.js 15.5 (App Router, React Server Components)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS v4 (CSS-first configuration)
-- **Data:** PostgreSQL + Prisma (planned), currently using mock data adapters
-- **Deployment:** Vercel (or similar)
-- **APIs:** WDFW, USGS, WSDOT (integration planned for Phase 2)
+Data is sourced from public government APIs (WDFW SPI database, USGS NWIS stream gauges, WSDOT fish passage barrier database). No fabricated or mock data is shown to end users.
 
-## 📚 Project Structure
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | Next.js 15.5 (App Router, React Server Components) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| Data | Pre-seeded JSON + live USGS API (see Data Architecture below) |
+| Deployment | Vercel (auto-deploy on push to `main`) |
+| Charts | Recharts |
+| Maps | Leaflet + react-leaflet |
+
+---
+
+## Project Structure
 
 ```
 puget-salmon-health/
-├── app/                      # Next.js App Router pages
-│   ├── page.tsx              # Home page (hero + two pillars)
-│   ├── dashboard/            # Data visualization pages
-│   ├── nations/              # Tribal partner pages
-│   ├── learn/                # Educational modules
-│   ├── stewardship/          # Project showcase
-│   ├── about/                # About & data sources
-│   ├── api/                  # API routes (planned)
-│   ├── layout.tsx            # Root layout with nav/footer
-│   └── globals.css           # Design tokens + Tailwind config
+├── app/                        # Next.js App Router pages
+│   ├── page.tsx                # Home page
+│   ├── dashboard/              # Salmon data visualization
+│   │   ├── page.tsx            # Main dashboard (map, charts, filters)
+│   │   ├── layout.tsx          # Dashboard layout (Leaflet CSS, metadata)
+│   │   └── [basin]/page.tsx    # Per-watershed detail page
+│   ├── learn/                  # Educational modules
+│   │   ├── page.tsx            # Learn index
+│   │   ├── salmon-life-cycle/  # Built module
+│   │   ├── why-salmon-matter/  # Built module
+│   │   ├── treaty-rights/      # Built module
+│   │   ├── reading-the-dashboard/ # Built module
+│   │   ├── educators/          # Educator resources page
+│   │   └── [module]/page.tsx   # Catch-all for future modules
+│   ├── stewardship/            # Restoration project showcase
+│   │   ├── page.tsx            # Project index
+│   │   └── [project]/page.tsx  # Project detail page
+│   ├── about/                  # About, data sources, contact
+│   ├── api/                    # Next.js API routes
+│   │   ├── wdfw/               # Serves pre-seeded salmon-returns.json
+│   │   ├── usgs/               # Live USGS stream temperatures (15-min ISR)
+│   │   ├── barriers/           # WSDOT fish passage barriers (15-min ISR)
+│   │   ├── scrape/             # Aggregated WDFW + NOAA data (15-min ISR)
+│   │   └── contact/            # Contact form handler (Resend)
+│   ├── layout.tsx              # Root layout: font, nav, footer, skip link
+│   └── globals.css             # Design tokens + Tailwind config
 │
-├── components/              # React components
-│   ├── layout/               # SiteHeader, SiteFooter
-│   ├── ui/                   # Card, PageHeader, StatusBadge, InfoTooltip, Placeholder
-│   ├── dashboard/            # SalmonMetricCard, WatershedSelector, SpeciesFilter
-│   └── nations/              # TribalPartnerCard, AttributionBanner, ContentSection
+├── components/
+│   ├── layout/                 # SiteHeader, SiteFooter
+│   ├── ui/                     # Card, PageHeader, StatusBadge, InfoTooltip
+│   ├── dashboard/              # SalmonMetricCard, WatershedMap, WatershedSelector,
+│   │                           # SpeciesFilter, IndicatorChart
+│   └── stewardship/            # ProjectList, ProjectCard
 │
-├── lib/                     # Utilities and data layer
-│   └── data/                 # Data adapters (mock → DB → API progression)
-│       ├── watersheds.ts
-│       ├── species.ts
-│       ├── salmon-returns.ts
-│       └── tribes.ts
+├── lib/
+│   └── data/                   # Data adapters
+│       ├── watersheds.ts       # 9 watershed definitions + slugs
+│       ├── species.ts          # 6 salmon species
+│       ├── salmon-returns.ts   # Reads real/salmon-returns.json; exports salmonDataFetchedAt
+│       ├── projects.ts         # 9 real stewardship projects
+│       └── real/
+│           └── salmon-returns.json   # Pre-seeded WDFW data (391 records, 106KB)
 │
-├── types/                   # TypeScript type definitions
-├── content/                 # MDX files for Learn modules (future)
-├── public/                  # Static assets, data files, images
-├── PLANNING.md              # Full architecture & design doc
-├── TASKS.md                 # Milestone tracking
-└── CLAUDE.md                # Claude Code session notes
+├── scripts/
+│   └── fetch-wdfw.mjs          # Seed script: fetches WDFW API → writes salmon-returns.json
+│
+├── types/index.ts              # TypeScript interfaces
+├── public/data/
+│   └── puget-sound-watersheds.geojson  # Watershed polygons (2.6MB, cached 1yr)
+├── docs/
+│   └── wdfw-schema.md          # WDFW API field mapping reference
+├── PLANNING.md                 # Architecture & design decisions
+├── TASKS.md                    # Milestone tracking
+└── CLAUDE.md                   # Claude Code session log
 ```
 
-## 🚀 Quick Start
+---
+
+## Quick Start
 
 ### Prerequisites
 
-- Node.js 20+ 
-- npm or pnpm
+- Node.js 20+
+- npm
 
 ### Installation
 
 ```bash
-# Clone the repository
 git clone https://github.com/sabinMas/puget-salmon-health.git
 cd puget-salmon-health
-
-# Install dependencies
 npm install
-
-# Run development server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3010](http://localhost:3010).
 
 ### Build for Production
 
@@ -86,142 +118,118 @@ npm run build
 npm start
 ```
 
-## 📋 Current Status (MVP Phase)
+---
 
-### ✅ Completed (M0 - Foundation)
-
-- [x] Next.js 15 project scaffolded with TypeScript + Tailwind v4
-- [x] Design tokens configured (color palette, typography)
-- [x] Site navigation shell (header + footer + routing)
-- [x] Shared UI components (Card, PageHeader, StatusBadge, InfoTooltip, Placeholder)
-- [x] Mock data adapters for watersheds, species, salmon returns, tribes
-- [x] All 14+ routes stubbed and building successfully
-- [x] Home page with hero, two-pillar design, and at-a-glance metrics
-- [x] Dashboard page with filters, metric cards, chart placeholders
-- [x] Nations index with partnership statement and tribal partner cards
-- [x] Individual Nation page template with attribution and placeholders
-- [x] Learn index page with module cards
-- [x] Stewardship index page with project cards
-- [x] About page with mission, data sources, accessibility statement
-
-### 🚧 In Progress (M1 - Dashboard MVP)
-
-- [ ] `<IndicatorChart>` component with Recharts
-- [ ] Dashboard data fetching and state management
-- [ ] Basin detail pages (`/dashboard/[basin]`)
-- [ ] Responsive design testing and refinement
-
-### 🗓️ Upcoming Milestones
-
-- **M2:** Nations template system refinement, sample tribal content
-- **M3:** Learn modules (full MDX content for 2-3 modules)
-- **M4:** Stewardship project detail pages
-- **M5:** Real API integration (WDFW, USGS, etc.)
-- **M6:** CMS for tribal content governance
-- **M7:** Accessibility audit, performance optimization, launch
-
-See [TASKS.md](./TASKS.md) for detailed milestone tracking.
-
-## 📊 Data Architecture
+## Data Architecture
 
 ### The Adapter Pattern
 
-All data access goes through **adapter functions** in `lib/data/`. This allows us to:
-
-1. Start with mock data (current phase)
-2. Migrate to PostgreSQL (Phase 2)
-3. Integrate live APIs (Phase 3)
-
-**The UI never knows which data source is active.** Components always call the same adapter functions:
+All data access goes through adapter functions in `lib/data/`. The UI never directly calls APIs or reads files — it always calls adapters:
 
 ```typescript
-import { getWatersheds } from '@/lib/data/watersheds';
 import { getSalmonReturns } from '@/lib/data/salmon-returns';
-
-const watersheds = await getWatersheds();
-const returns = await getSalmonReturns('skagit', 'chinook', 2020, 2024);
+import { getProjects }      from '@/lib/data/projects';
+import { getWatersheds }    from '@/lib/data/watersheds';
 ```
 
-Internally, adapters can switch from JSON → DB → API without changing component code.
+This makes it straightforward to upgrade data sources without changing any component code.
 
-## 🌱 Design Principles
+### Current Data Sources
 
-### Two Equal Pillars
+| Data | Source | How It Works |
+|------|--------|-------------|
+| Salmon returns | WDFW SPI (`data.wa.gov`, dataset `fgyz-n3uk`) | Pre-seeded JSON; refresh with `npm run data:refresh` |
+| Stream temperatures | USGS NWIS (`waterservices.usgs.gov`) | Live API call, 15-min ISR cache |
+| Fish passage barriers | WSDOT ArcGIS REST API | Live API call, 15-min ISR cache |
+| Watershed boundaries | USGS NHD (GeoJSON) | Static file in `/public/data/`, cached 1 year |
 
-**Data** and **Indigenous knowledge** are presented as complementary, not hierarchical. Both are primary content, not one as the "real" information with the other as decoration.
+### Refreshing Salmon Return Data
 
-### Tribal Content Governance
+The WDFW salmon return data is stored as a pre-seeded JSON file to avoid rate limits and build-time API failures. To update it with the latest WDFW data:
 
-- Tribal nations **control their own pages**: what to share, how to frame it, when to update
-- Content is **reviewed and approved** by tribal leadership before publication
-- **Attribution banners** on every tribal page make governance transparent
-- **Placeholder components** clearly mark sections awaiting tribal content
-- Tribes can **modify or remove** content at any time
+```bash
+npm run data:refresh
+```
 
-### Accessibility-First
+This runs `scripts/fetch-wdfw.mjs`, which:
+1. Fetches all Puget Sound Chinook records from the WDFW Socrata API
+2. Maps population names to watershed slugs
+3. Writes `lib/data/real/salmon-returns.json` (~106KB, 391 records)
 
-- WCAG 2.1 Level AA compliance target
-- Keyboard navigation for all interactive elements
-- Screen reader-friendly chart descriptions
-- Color + text/icon pairings (never color alone)
-- Skip-to-content links, semantic HTML
-
-### Plain Language
-
-- A 7th grader should understand the landing page
-- Technical terms are explained when introduced
-- Charts have plain-language interpretations
-- "What does this mean?" tooltips throughout
-
-## 🤝 Contributing
-
-### For Tribal Partners
-
-If your tribal nation would like to participate in this project:
-
-1. Contact us at partnerships@pugetsalmonhealth.org
-2. We'll schedule a consultation to discuss your vision and governance preferences
-3. Content development happens at your pace, with your approval required at every stage
-4. You retain full control of your nation's page
-
-### For Developers
-
-Contributions are welcome! Please:
-
-1. Read [PLANNING.md](./PLANNING.md) to understand the architecture
-2. Check [TASKS.md](./TASKS.md) for current priorities
-3. Follow existing component patterns (especially the adapter pattern)
-4. Test accessibility (keyboard nav, screen reader)
-5. Submit PRs with clear descriptions
-
-### For Educators
-
-Looking for lesson ideas or standards alignment? Check `/learn/educators` (coming in M3). Feedback on educational content is always welcome.
-
-## 📜 Documentation
-
-- **[PLANNING.md](./PLANNING.md)** — Full architecture, information architecture, sitemap, wireframes, data model
-- **[TASKS.md](./TASKS.md)** — Milestone tracking, sprint planning, task breakdown
-- **[CLAUDE.md](./CLAUDE.md)** — Claude Code session notes and project setup
-- **[DATA_SOURCES.md](./DATA_SOURCES.md)** — Detailed data source reference
-- **[QUICKSTART.md](./QUICKSTART.md)** — Developer onboarding guide
-
-## 💯 Acknowledgments
-
-This project is built in partnership with the Native Nations of Puget Sound, who are the original and ongoing stewards of these waters and salmon populations.
-
-Data sources include WDFW, USGS, NOAA Fisheries, Puget Sound Partnership, and tribal monitoring programs.
-
-Built with respect for tribal data sovereignty and traditional ecological knowledge.
-
-## 📧 Contact
-
-- **Partnerships:** partnerships@pugetsalmonhealth.org
-- **Data questions:** data@pugetsalmonhealth.org  
-- **General inquiries:** info@pugetsalmonhealth.org
+Run this periodically (e.g., annually after WDFW publishes new escapement data) and commit the updated JSON.
 
 ---
 
-**License:** [To be determined in consultation with tribal partners]
+## Environment Variables
 
-**Land Acknowledgment:** This dashboard tracks salmon across the traditional territories of the Coast Salish peoples, including but not limited to the Duwamish, Muckleshoot, Puyallup, Snoqualmie, Suquamish, Stillaguamish, Tulalip, Swinomish, Lummi, Nooksack, Nisqually, Squaxin Island, and Skokomish peoples. We honor their past, present, and future stewardship of these lands and waters.
+For the contact form to work, set these in Vercel project settings (Settings → Environment Variables):
+
+| Variable | Description |
+|----------|-------------|
+| `RESEND_API_KEY` | API key from [resend.com](https://resend.com) — free tier is sufficient |
+| `CONTACT_EMAIL` | Email address where contact form submissions are delivered |
+
+For local development, create a `.env.local` file:
+
+```
+RESEND_API_KEY=re_your_key_here
+CONTACT_EMAIL=you@example.com
+```
+
+---
+
+## Milestones
+
+| Milestone | Status |
+|-----------|--------|
+| M0 Foundation | ✅ Complete |
+| M1 Dashboard MVP | ✅ Complete |
+| M2 Nations System | Removed (no real partnerships) |
+| M3 Learn Hub | ✅ Complete |
+| M4 Stewardship & About | ✅ Complete |
+| M5 Real API Data | ✅ Complete |
+| M6 Stewardship Content | 🚧 In progress |
+| M7 Polish / Launch | ✅ Complete |
+
+See [TASKS.md](./TASKS.md) for task-level detail.
+
+---
+
+## Design Principles
+
+**Data first.** Every number on the dashboard comes from a named government data source. The About page documents every source, update frequency, and known limitation.
+
+**Accessible.** WCAG 2.1 Level AA. Keyboard navigation, screen-reader-friendly charts (accessible data tables behind every chart), semantic HTML, color + text/icon pairings, skip-to-content links.
+
+**Plain language.** A 7th grader should understand the landing page. Technical terms are explained when introduced. Every chart has a 2–3 sentence plain-language interpretation.
+
+**Built to grow.** Data adapters, typed interfaces, and a clear adapter pattern mean new watersheds, species, or data sources can be added without architectural changes.
+
+---
+
+## Contributing
+
+1. Read [PLANNING.md](./PLANNING.md) for architecture and design decisions
+2. Check [TASKS.md](./TASKS.md) for current priorities
+3. Follow the adapter pattern — all data access through `lib/data/` functions
+4. Run `npm run lint && npm run build` before submitting a PR
+5. Test keyboard navigation and screen reader behavior for any UI changes
+
+---
+
+## Data Sources & Attribution
+
+- **WDFW Salmonid Population Indicators** — Washington Department of Fish and Wildlife, `data.wa.gov` dataset `fgyz-n3uk`
+- **USGS National Water Information System** — U.S. Geological Survey stream gauge network
+- **WSDOT Fish Passage Barrier API** — Washington State Department of Transportation
+- **Watershed Boundaries** — USGS National Hydrography Dataset
+
+---
+
+## Land Acknowledgment
+
+This dashboard tracks salmon across the traditional territories of the Coast Salish peoples, including but not limited to the Duwamish, Muckleshoot, Puyallup, Snoqualmie, Suquamish, Stillaguamish, Tulalip, Swinomish, Lummi, Nooksack, Nisqually, Squaxin Island, and Skokomish peoples. Their relationship with salmon predates written history and continues today through treaty rights, co-management, and stewardship programs documented on this site.
+
+---
+
+**License:** MIT

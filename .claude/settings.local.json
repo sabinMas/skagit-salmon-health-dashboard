@@ -14,7 +14,12 @@
       "Bash(python:*)",
       "Bash(curl:*)",
       "Bash(python3:*)",
-      "Bash(cd /c/Users/mason/Documents/GitHub/puget-salmon-health && ls app/ && npm run build 2>&1)"
+      "Bash(cd /c/Users/mason/Documents/GitHub/puget-salmon-health && ls app/ && npm run build 2>&1)",
+      "Bash(npm install:*)",
+      "Bash(vercel:*)",
+      "Bash(cd \"C:\\\\Users\\\\mason\\\\Documents\\\\GitHub\\\\puget-salmon-health\" && npm uninstall next-mdx-remote 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\mason\\\\Documents\\\\GitHub\\\\puget-salmon-health\" && git add package.json package-lock.json && git commit -m \"$\\(cat <<'EOF'\nRemove unused next-mdx-remote dependency \\(CVE-2026-0969\\)\n\nPackage was never imported anywhere in the codebase — leftover from\ninitial scaffolding. Removing it unblocks Vercel deployment.\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\nEOF\n\\)\" && git push 2>&1)",
+      "Bash(cd \"C:\\\\Users\\\\mason\\\\Documents\\\\GitHub\\\\puget-salmon-health\" && git add -A && git commit -m \"$\\(cat <<'EOF'\nAdd 2 learn modules, contact form, and update docs\n\nLearning modules:\n- Add /learn/why-salmon-matter \\(keystone species, nutrient cycle, economics,\n  cultural significance, threats, reasons for hope; grades 7-12, 20 min\\)\n- Add /learn/reading-the-dashboard \\(data sources, chart interpretation,\n  status colors, env indicators, data limitations; all ages, 10 min\\)\n- Update educators page to list all 4 modules with objectives + standards\n\nContact form \\(replaces fake @pugetsalmonhealth.org addresses\\):\n- Add /api/contact POST route using Resend SDK \\(lazy init, build-safe\\)\n- Add ContactForm client component with accessible fields + error handling\n- Rewrite about page to use ContactForm; educators CTA links to /about#contact\n- README documents RESEND_API_KEY + CONTACT_EMAIL env vars\n\nDocs:\n- Rewrite README.md: accurate current state, real data sources,\n  data:refresh instructions, env var table, correct project structure\n- Remove all stale nations/tribal/mock-data framing\n\nCo-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>\nEOF\n\\)\" && git push 2>&1)"
     ]
   }
 }

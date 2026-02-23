@@ -28,10 +28,6 @@ const TYPE_COLORS: Record<ProjectType, string> = {
   research:            'bg-gray-100 text-gray-800',
 };
 
-function slugToName(slug: string): string {
-  return slug.split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
-}
-
 // ── Types ─────────────────────────────────────────────────────────────────────
 
 interface PageProps {
@@ -61,7 +57,6 @@ export default async function ProjectPage({ params }: PageProps) {
 
   const typeLabel = TYPE_LABELS[project.type];
   const typeColor = TYPE_COLORS[project.type];
-  const tribeNames = project.tribeIds.map(slugToName);
 
   return (
     <div className="min-h-screen py-8 px-4">
@@ -123,15 +118,15 @@ export default async function ProjectPage({ params }: PageProps) {
           <h2 className="text-xl font-bold text-primary mb-4">Project Details</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="bg-white border border-gray-200 rounded-lg p-5 text-center">
-              <p className="text-3xl font-bold text-primary mb-1">2021</p>
+              <p className="text-3xl font-bold text-primary mb-1">{project.yearStarted}</p>
               <p className="text-xs text-gray-500 uppercase tracking-wide">Year Started</p>
             </div>
             <div className="bg-white border border-gray-200 rounded-lg p-5 text-center">
-              <p className="text-lg font-bold text-primary mb-1">
-                {tribeNames.join(', ')}
+              <p className="text-sm font-bold text-primary mb-1 leading-snug">
+                {project.partnerOrgs.length > 0 ? project.partnerOrgs.join(', ') : 'Multiple organizations'}
               </p>
               <p className="text-xs text-gray-500 uppercase tracking-wide">
-                {tribeNames.length === 1 ? 'Lead Organization' : 'Lead Organizations'}
+                {project.partnerOrgs.length === 1 ? 'Lead Organization' : 'Partner Organizations'}
               </p>
             </div>
             <div className="bg-white border border-gray-200 rounded-lg p-5 text-center">
