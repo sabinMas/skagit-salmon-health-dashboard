@@ -14,8 +14,8 @@ M2: Nations Template System             ██████████  REMOVED 
 M3: Learn & Education Hub               ██████████  COMPLETE ✅
 M4: Stewardship & About Pages           ██████████  COMPLETE ✅
 M5: Data Integration (real APIs)        ██████████  COMPLETE ✅
-M6: CMS & Partner Editing Workflow      ░░░░░░░░░░  NEEDS REPLAN
-M7: Polish, Accessibility Audit, Launch ████████░░  ~80% complete
+M6: CMS & Partner Editing Workflow      ██████████  CLOSED (not needed)
+M7: Polish, Accessibility Audit, Launch ██████████  COMPLETE ✅
 ```
 
 ---
@@ -96,18 +96,18 @@ Stewardship projects page (`/stewardship`) covers restoration initiatives instea
 
 ---
 
-## M6: CMS for Stewardship Projects 🚧 PARTIALLY COMPLETE
+## M6: CMS for Stewardship Projects — CLOSED
 
-> Original scope (tribal partner CMS with content governance) is obsolete.
-> New scope: lightweight way to add/edit stewardship project content without code changes.
-> Projects list partner organizations (tribal nations, NGOs, agencies) as plain text strings.
+> No external partners planned. Project content is managed directly in `lib/data/projects.ts`.
+> A CMS or partner editing workflow is not needed at this time.
+> Contact form (M6.6) retained for general public inquiries.
 
-- [ ] M6.1 — Decide on CMS approach (current: `lib/data/projects.ts`; upgrade if non-dev editors needed)
+- [-] M6.1 — CMS approach (closed — plain TS file is sufficient, no external editors needed)
 - [x] M6.2 — Refactored `Project` type: `tribeIds` → `partnerOrgs: string[]`; added `yearStarted: number`
 - [x] M6.3 — Added 9 real, publicly documented Puget Sound stewardship projects
-- [x] M6.4 — Updated all stewardship pages + `ProjectList` to render `partnerOrgs` (no governance banner)
-- [ ] M6.5 — Write a short guide for adding new projects
-- [x] M6.6 — Contact form: `/api/contact` (Resend), `<ContactForm>` component, about page integration
+- [x] M6.4 — Updated all stewardship pages + `ProjectList` to render `partnerOrgs`
+- [-] M6.5 — Project editing guide (closed — not needed without external editors)
+- [x] M6.6 — Contact form: `/api/contact` (Resend), `<ContactForm>` component, about page
 
 ---
 
@@ -165,10 +165,10 @@ Stewardship projects page (`/stewardship`) covers restoration initiatives instea
 
 ### Next Priorities
 
-1. **Contact form activation** — Add `RESEND_API_KEY` + `CONTACT_EMAIL` to Vercel environment variables (Settings → Environment Variables), then redeploy
-2. **M6.1** — Decide on CMS approach for stewardship projects (plain TS file is fine until a non-dev needs to edit)
-3. **M6.5** — Write a short guide for adding new stewardship projects
+1. **Contact form activation** — Ensure `RESEND_API_KEY` + `CONTACT_EMAIL` are set under Production environment in Vercel, then redeploy
+2. **Future** — Add new stewardship projects directly in `lib/data/projects.ts` as they are identified
+3. **Future** — Wire real USGS annual streamflow data to replace synthetic env indicator charts
 
 ### Blockers
 
-None. Build is clean. Site is deployable.
+None. Build is clean. Site is fully deployed.
