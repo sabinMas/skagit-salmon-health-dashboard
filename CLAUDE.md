@@ -117,6 +117,21 @@ Before stopping:
 - M1 milestone marked **COMPLETE** in TASKS.md
 - `npm run lint` ✅ `npm run build` ✅ all 15 routes
 
+### 2026-02-23 (session 13)
+- **PLANNING.md rewrite** — Removed all nations/tribal-partnership framing; updated vision, sitemap, user journeys, data model, and component library to match the real site (data dashboard + stewardship projects with plain-text partner attribution)
+- **M6 — Project type refactor**: `tribeIds: string[]` → `partnerOrgs: string[]`; added `yearStarted: number`; removed `tribeId` filter from `getProjects()`; added `getProjectBySlug()` helper
+- **M6 — Real stewardship data**: Replaced 5 fabricated tribal projects with 9 real, publicly documented Puget Sound stewardship projects covering all 9 watersheds (Nisqually delta, Skagit System Cooperative, Cedar River sockeye hatchery, WSDOT culvert replacement, Stillaguamish Chinook recovery, Duwamish Alive, Nooksack Salmon Enhancement Association, Skokomish channel restoration, WRIA 7 Snohomish recovery)
+- **M6 CLOSED** — No external partners or CMS needed; content managed directly in `lib/data/projects.ts`
+- **M7.6 — Deployed to Vercel**: Removed unused `next-mdx-remote@5.0.0` (CVE-2026-0969 blocked deploy); site went live at `puget-salmon-health.vercel.app`
+- **M7.7 — README rewrite**: Accurate tech stack, real project structure, `data:refresh` instructions, env var table; all stale nations/mock-data content removed
+- **M3.9/M3.10 — Two new learning modules**:
+  - `/learn/why-salmon-matter`: keystone species, nutrient cycling, economic value, cultural significance, threats, reasons for hope (grades 7–12, 20 min)
+  - `/learn/reading-the-dashboard`: data sources, chart interpretation, status colors, env indicators, data limitations (all ages, 10 min)
+  - Educators page updated to list all 4 modules with learning objectives and standards alignment
+- **Contact form** — `/api/contact` POST route (Resend SDK, lazy init for build safety); `<ContactForm>` client component (accessible fields, loading/error/success states); about page embeds form replacing all fake `@pugetsalmonhealth.org` addresses; educators CTA links to `/about#contact`
+- **Contact form debugging**: Diagnosed `CONTACT_EMAIL` env var not reaching Production (typo `CONTAC_EMAIL` in Vercel dashboard); `vercel login` + `vercel link` + `vercel env ls` confirmed the typo; user corrected it; confirmed live with `{"success":true}` HTTP 200
+- `npm run build` ✅ 18 routes clean (up from 15); all milestones M0–M7 complete
+
 ### 2026-02-23 (session 12)
 - **M7.6 DEPLOYED** — Removed unused `next-mdx-remote@5.0.0` (CVE-2026-0969, was blocking Vercel); site is live
 - **M3.9/M3.10** — Built two new full learning modules: `why-salmon-matter` (keystone species, nutrient cycle, economic/cultural value, threats, hope; grades 7–12) and `reading-the-dashboard` (data sources, chart interpretation, status colors, env indicators, data caveats; all ages); educators page updated to list all 4 modules with standards + objectives

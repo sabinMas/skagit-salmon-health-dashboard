@@ -151,24 +151,25 @@ Stewardship projects page (`/stewardship`) covers restoration initiatives instea
 
 ---
 
-## Current Sprint Status (Updated: Feb 22, 2026)
+## Current Sprint Status (Updated: Feb 23, 2026)
 
 ### Just Completed This Session
 
-- ✅ Removed all Nations/tribal pages (fabricated partnerships)
-- ✅ M5 Data Integration fully complete
-- ✅ M7.1 Accessibility audit (WCAG 2.1 AA fixes across 9 files)
-- ✅ M7.2 Performance optimization (API cache failures eliminated, Leaflet CSS scoped)
-- ✅ M7.3 Responsive design review
-- ✅ M7.4 Content review
-- ✅ M7.5 SEO (metadata, OG, Twitter on all pages)
+- ✅ PLANNING.md rewritten — removed all tribal/nations framing, reflects real site
+- ✅ M6 — Project type refactored (`tribeIds` → `partnerOrgs`), 9 real stewardship projects added
+- ✅ M6 CLOSED — no external partners or CMS needed
+- ✅ M7.6 — Deployed to Vercel (fixed CVE-2026-0969 blocking deploy)
+- ✅ M7.7 — README fully rewritten
+- ✅ M3.9/M3.10 — Two new learn modules: why-salmon-matter, reading-the-dashboard
+- ✅ Contact form live — `/api/contact` + `<ContactForm>`; Resend confirmed working (HTTP 200)
+- ✅ Contact form env var typo (`CONTAC_EMAIL`) diagnosed via `vercel env ls` and fixed
 
 ### Next Priorities
 
-1. **Contact form activation** — Ensure `RESEND_API_KEY` + `CONTACT_EMAIL` are set under Production environment in Vercel, then redeploy
-2. **Future** — Add new stewardship projects directly in `lib/data/projects.ts` as they are identified
-3. **Future** — Wire real USGS annual streamflow data to replace synthetic env indicator charts
+1. **Add new stewardship projects** — edit `lib/data/projects.ts` directly as projects are identified
+2. **Wire real USGS streamflow data** — replace synthetic env indicator charts on basin detail pages
+3. **`npm run data:refresh`** — run annually after WDFW publishes new escapement data and commit updated JSON
 
 ### Blockers
 
-None. Build is clean. Site is fully deployed.
+None. All 18 routes clean. Site fully deployed and contact form live.
